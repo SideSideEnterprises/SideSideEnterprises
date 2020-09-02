@@ -1,0 +1,10 @@
+/* ==========================================================================
+   #Widget styles
+   ========================================================================== */
+.tribe-events-notices {
+	@include mkdBorderRadius(0);
+}
+
+.tribe-list-widget li {
+	list-style-type: none;
+}

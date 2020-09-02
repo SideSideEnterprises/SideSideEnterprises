@@ -1,0 +1,74 @@
+/* ==========================================================================
+# Counter style - begin
+========================================================================== */
+
+.mkd-counter-holder {
+	display: block;
+	opacity: 0;
+	@include mkdTransition(opacity 0.3s ease-in);
+	padding: 20px 0;
+
+	.mkd-counter {
+		font-size: 87px;
+		line-height: 1em;
+		height: 1em;
+		font-weight: 700;
+		overflow: hidden;
+		color: $headings-text-color;
+		font-family: $headings-font-family;
+		display: inline-block;
+		float: left;
+	}
+
+	.mkd-counter-content {
+		padding-left: 142px;
+
+		.mkd-counter-title {
+			margin-top: 8px;
+		}
+		.mkd-counter-text {
+			margin-top: 19px;
+		}
+		.mkd-counter-link {
+			margin-top: 30px;
+		}
+	}
+
+	&.mkd-counter-light {
+		.mkd-counter {
+			color: #fff;
+		}
+
+		.mkd-counter-content {
+			.mkd-counter-title {
+				color:#fff;
+			}
+
+			.mkd-counter-text {
+				color:#fff;
+			}
+		}
+	}
+
+	&.mkd-counter-top {
+
+		text-align: center;
+
+		.mkd-counter {
+			float: none;
+            margin-bottom: 18px;
+            font-size: 70px;
+		}
+		.mkd-counter-content {
+			padding: 0 15%;
+
+            .mkd-counter-text {
+                margin-top: 32px;
+            }
+		}
+	}
+}
+
+/* ==========================================================================
+# Counter style - end
+========================================================================== */

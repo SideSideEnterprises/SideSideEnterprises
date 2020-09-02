@@ -1,0 +1,32 @@
+.mkd-text-marquee {
+    position: relative;
+
+    .mkd-text-marquee-wrapper {
+        position: relative;
+        overflow: hidden;
+ 
+        .mkd-text-marquee-title {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            color: #f4f3f5;
+            letter-spacing: -1px;
+            font-size: 40vh;
+            font-size: 20vmax;
+            line-height: 1.2em;
+            font-family:$headings-font-family;
+            font-weight: 700; 
+            white-space: nowrap;
+            text-transform:uppercase;
+            padding:0 10% 0 10%;
+            min-width:100%;
+            box-sizing:border-box;
+
+            &.mkd-aux-text {
+                position: absolute;
+                top:0;
+            }
+        }
+
+    }
+}

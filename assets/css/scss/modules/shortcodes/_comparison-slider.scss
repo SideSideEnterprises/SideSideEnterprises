@@ -1,0 +1,136 @@
+.comparison-slider {
+	img {
+		position: absolute;
+	}
+
+	visibility: hidden;
+
+	&.active {
+		cursor: -webkit-grab;
+		cursor: grab;
+	}
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after {
+	content: " ";
+	display: block;
+	background: #fff;
+	opacity: 0.35;
+	position: absolute;
+	z-index: 30;
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after {
+	width: 1px;
+	height: 9999px;
+	left: 50%;
+	margin-left: -1.5px;
+}
+
+.twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after {
+	width: 9999px;
+	height: 1px;
+	top: 50%;
+	margin-top: -1.5px;
+}
+
+.twentytwenty-before-label, .twentytwenty-after-label {
+	display: none;
+}
+
+.twentytwenty-container {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	z-index: 0;
+	overflow: hidden;
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+
+	img {
+		max-width: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		display: block;
+	}
+}
+
+.twentytwenty-container * {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.twentytwenty-before {
+	z-index: 20;
+}
+
+.twentytwenty-after {
+	z-index: 10;
+}
+
+.twentytwenty-handle {
+	height: 86px;
+	width: 86px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -43px;
+	margin-top: -43px;
+	background-color: #fff;
+	z-index: 40;
+	@include mkdBorderRadius(50%);
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+.twentytwenty-handle:before {
+	.twentytwenty-vertical & {
+		left: 50%;
+		margin-left: 43px;
+	}
+
+	.twentytwenty-horizontal & {
+		bottom: 50%;
+		margin-bottom: 43px;
+	}
+}
+
+.twentytwenty-handle:after {
+	.twentytwenty-vertical & {
+		right: 50%;
+		margin-right: 43px;
+	}
+
+	.twentytwenty-horizontal & {
+		top: 50%;
+		margin-top: 43px;
+	}
+}
+
+.twentytwenty-left-arrow, .twentytwenty-down-arrow {
+	display: block;
+	height: 86px;
+	width: 86px;
+	line-height: 86px;
+	color: #828282;
+	font-size: 36px;
+	text-align: center;
+
+}
+
+.twentytwenty-horizontal .twentytwenty-left-arrow {
+	&:before {
+		content: '\2b';
+		font-family: 'ElegantIcons';
+	}
+}
+
+.twentytwenty-vertical .twentytwenty-down-arrow {
+	&:before {
+		content: '\2a';
+		font-family: 'ElegantIcons';
+	}
+}

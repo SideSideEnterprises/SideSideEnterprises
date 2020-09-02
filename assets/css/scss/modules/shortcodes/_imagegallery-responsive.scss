@@ -1,0 +1,128 @@
+/* ==========================================================================
+# Image Gallery - begin
+========================================================================== */
+
+/* Image Gallery Grid - begin
+========================================================================== */
+
+.mkd-image-gallery {
+
+	.mkd-image-gallery-grid.mkd-gallery-columns-2 {
+
+		.mkd-gallery-image {
+
+			@include phone-portrait {
+				width: 100%;
+			}
+		}
+	}
+
+	.mkd-image-gallery-grid.mkd-gallery-columns-3 {
+
+		.mkd-gallery-image {
+
+			@include ipad-portrait {
+				width: 100%;
+			}
+
+			@include phone-portrait {
+				width: 100%;
+			}
+		}
+	}
+
+	.mkd-image-gallery-grid.mkd-gallery-columns-4 {
+
+		.mkd-gallery-image {
+
+			@include ipad-landscape {
+				width: 50%;
+
+				&:nth-child(4n+1) {
+					clear: none;
+				}
+			}
+
+			@include ipad-portrait {
+				width: 50%;
+
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+
+				&:nth-child(3n+1) {
+					clear: none;
+				}
+			}
+
+			@include phone-portrait {
+				width: 100%;
+			}
+		}
+	}
+
+	.mkd-image-gallery-grid.mkd-gallery-columns-5 {
+
+		.mkd-gallery-image {
+
+			@include laptop-landscape {
+				width: 25%;
+
+				&:nth-child(4n+1) {
+					clear: both;
+				}
+
+				&:nth-child(5n+1) {
+					clear: none;
+				}
+			}
+
+			@include ipad-landscape {
+				width: 33.3333%;
+
+				&:nth-child(3n+1) {
+					clear: both;
+				}
+
+				&:nth-child(4n+1) {
+					clear: none;
+				}
+			}
+
+			@include ipad-portrait {
+				width: 50%;
+
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+
+				&:nth-child(3n+1) {
+					clear: none;
+				}
+			}
+
+			@include phone-portrait {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+	.mkd-title-description {
+		display: none;
+	}
+}
+
+/* Image Gallery Grid - end
+========================================================================== */
+
+/* Image Gallery Slider - begin
+========================================================================== */
+
+/* Image Gallery Slider - end
+========================================================================== */
+
+/* ==========================================================================
+# Image Gallery - end
+========================================================================== */

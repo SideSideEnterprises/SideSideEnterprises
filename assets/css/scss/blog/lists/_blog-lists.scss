@@ -1,0 +1,40 @@
+@import 'types/masonry_full_width';
+@import 'types/masonry';
+@import 'types/masonry_gallery';
+@import 'types/standard';
+@import 'types/split';
+
+.mkd-blog-holder {
+    article {
+        &.sticky {
+            .mkd-post-title a {
+                color: $first-main-color;
+            }
+        }
+
+		.mkd-more-link-container {
+			margin-bottom: 20px;
+		}
+    }
+}
+
+.mkd-filter-blog-holder {
+
+	text-align: center;
+	margin-bottom: 30px;
+
+	li {
+		display: inline-block;
+		padding: 0 8px;
+		cursor: pointer;
+		font-size: 15px;
+
+		&.mkd-active {
+			color: $first-main-color;
+		}
+	}
+}
+
+.mkd-blog-holder:not(.mkd-blog-single) .mkd-single-links-pages {
+    margin-bottom: 20px;
+}

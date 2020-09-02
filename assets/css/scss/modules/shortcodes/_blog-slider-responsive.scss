@@ -1,0 +1,73 @@
+@include mac {
+	.mkd-blog-slider-holder.masonry article.format-link,
+	.mkd-blog-slider-holder.masonry article.format-quote {
+		.mkd-post-text-inner {
+			height: 442px;
+		}
+	}
+}
+
+@include laptop-landscape {
+	.mkd-blog-slider-holder.masonry article.format-link,
+	.mkd-blog-slider-holder.masonry article.format-quote {
+		.mkd-post-text-inner {
+			height: 413px;
+		}
+	}
+}
+
+@include ipad-landscape {
+	.mkd-blog-slider-holder.masonry article.format-link,
+	.mkd-blog-slider-holder.masonry article.format-quote {
+		.mkd-post-text-inner {
+			height: 635px;
+		}
+	}
+
+	.mkd-blog-slider-holder.simple.light .mkd-blog-slider-item:nth-child(3n):after {
+		background-color: #d7dde3;
+	}
+
+	.mkd-blog-slider-holder.simple.dark .mkd-blog-slider-item:nth-child(3n):after {
+		background-color: #4a4b4f;
+	}
+
+	.mkd-blog-slider-holder.simple.light .mkd-blog-slider-item:nth-child(2n):after {
+		background-color: transparent;
+	}
+
+	.mkd-blog-slider-holder.simple.dark .mkd-blog-slider-item:nth-child(2n):after {
+		background-color: transparent;
+	}
+}
+
+@include ipad-portrait {
+	.mkd-blog-slider-holder.simple .mkd-blog-slider-item:after {
+		background-color: transparent!important; //important to override nth-child selectors
+	}
+
+	.mkd-blog-slider-holder.masonry article.format-link,
+	.mkd-blog-slider-holder.masonry article.format-quote {
+		.mkd-post-text-inner {
+			height: 537px;
+		}
+	}
+}
+
+@include phone-landscape {
+	.mkd-blog-slider-holder.masonry article.format-link,
+	.mkd-blog-slider-holder.masonry article.format-quote {
+		.mkd-post-text-inner {
+			height: 458px;
+		}
+	}
+}
+
+@include phone-portrait {
+	.mkd-blog-slider-holder.masonry article.format-link,
+	.mkd-blog-slider-holder.masonry article.format-quote {
+		.mkd-post-text-inner {
+			height: 412px;
+		}
+	}
+}

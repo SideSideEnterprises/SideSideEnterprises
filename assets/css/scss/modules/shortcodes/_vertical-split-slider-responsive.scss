@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Start of Vertical Split Slider Responsive
+   ========================================================================== */
+@include ipad-landscape {
+	body.mkd-vertical-split-screen-initialized {
+		overflow-y: visible !important;
+		height: auto !important;
+	}
+
+	.mkd-vertical-split-slider,
+	#multiscroll-nav {
+		display: none;
+	}
+
+	.mkd-vertical-split-slider-responsive {
+		display: block;
+	}
+
+	.mkd-vss-ms-section {
+		background-position: center center;
+		background-size: cover;
+	}
+
+
+}
+
+/* ==========================================================================
+   End of Vertical Split Slider Responsive
+   ========================================================================== */

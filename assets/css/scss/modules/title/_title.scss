@@ -1,0 +1,259 @@
+/* ==========================================================================
+# Title area style - start
+========================================================================== */
+
+@include keyframes(title-animation-from-right) {
+	0% {
+		opacity: 0;
+		transform: translate(50%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(title-animation-from-left) {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.mkd-title {
+	display: block;
+	width: 100%;
+	height: 80px;
+	text-align: left;
+	position: relative;
+	z-index: 101;
+	background-color: transparentize($first-main-color, 0.2);
+	background-position: center 0;
+	background-repeat: no-repeat;
+
+	&.mkd-has-parallax-background {
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 101;
+	}
+
+	&.mkd-content-center-alignment {
+		text-align: center;
+
+		.mkd-subtitle {
+			margin: 0 auto;
+		}
+	}
+
+	&.mkd-content-right-alignment {
+		text-align: right;
+	}
+
+	&.mkd-animation-right-left {
+		h1, .mkd-subtitle span, .mkd-breadcrumbs-holder {
+			@include animation(title-animation-from-right, 0.5s, 1, cubic-bezier(0.175, 0.885, 0.320, 1.275), 1s);
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+	}
+
+	&.mkd-animation-left-right {
+		h1, .mkd-subtitle span, .mkd-breadcrumbs-holder {
+			@include animation(title-animation-from-left, 0.5s, 1, cubic-bezier(0.175, 0.885, 0.320, 1.275), 1s);
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+	}
+
+	&.mkd-has-responsive-background {
+		height: auto !important;
+
+		.mkd-title-holder {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.mkd-title-holder .mkd-container {
+			display: block;
+			height: 100%;
+		}
+
+		.mkd-title-holder .mkd-container-inner {
+			display: table;
+			height: 100%;
+		}
+
+		.mkd-title-holder .mkd-title-subtitle-holder {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+		}
+
+	}
+
+	.mkd-title-image {
+		img {
+			display: block;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	&.mkd-title-image-not-responsive {
+
+		.mkd-title-image {
+			display: none;
+		}
+
+	}
+
+	&:not(.mkd-title-in-grid) .mkd-container-inner {
+		width: 100%;
+		padding: 0 30px;
+	}
+
+	.mkd-title-holder {
+		display: table;
+		height: 100%;
+		position: relative;
+		width: 100%;
+
+		.mkd-container {
+			background-color: transparent;
+			display: table-row;
+			vertical-align: middle;
+		}
+
+		.mkd-container-inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.mkd-title-subtitle-holder {
+			display: block;
+			padding: 0;
+			position: relative;
+			z-index: 25;
+		}
+
+		.mkd-title-subtitle-holder-inner {
+			position: relative; //because of the breadcrumbs (absolute position) on standard type title
+		}
+
+		/* #Standard title - start
+		========================================================================== */
+
+		h1 {
+			display: inline-block;
+			line-height: 1em;
+			vertical-align: middle;
+			font-family: $headings-font-family;
+			font-size: 45px;
+			font-weight: 700;
+			margin: 0;
+		}
+
+		h1 span {
+			display: inline-block;
+		}
+
+		.mkd-subtitle {
+			display: block;
+			font-family: $headings-font-family;
+			font-size: 19px;
+			line-height: 1.666666666666667em;
+			font-weight: 700;
+			width: 60%;
+			margin-bottom: 25px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: $first-main-color;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		/* #Standard title - end
+		========================================================================== */
+
+		/* #Breadcrumb title - start
+		========================================================================== */
+
+		.mkd-breadcrumbs-holder {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.mkd-breadcrumbs a, .mkd-breadcrumbs span {
+			color: $default-text-color;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 1.5em;
+			display: inline-block;
+			vertical-align: middle;
+			font-family: $headings-font-family;
+		}
+
+		.mkd-delimiter {
+			margin: 0px 10px;
+		}
+		/* #Breadcrumb title - end
+		========================================================================== */
+
+	}
+
+	&.mkd-standard-type {
+		.mkd-breadcrumbs-holder {
+			position: absolute;
+			top: 0;
+			height: 100%;
+
+			.mkd-breadcrumbs {
+				display: table;
+				height: 100%;
+				width: 100%;
+			}
+
+			.mkd-breadcrumbs-inner {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+		}
+	}
+
+	&.mkd-standard-type.mkd-content-left-alignment {
+		.mkd-breadcrumbs-holder {
+			right: 0;
+		}
+	}
+
+	&.mkd-standard-type.mkd-content-right-alignment {
+		.mkd-breadcrumbs-holder {
+			left: 0;
+		}
+	}
+
+	&.mkd-standard-type.mkd-content-center-alignment {
+		.mkd-breadcrumbs-holder {
+			position: relative;
+			top: auto;
+			height: auto;
+			display: block;
+			margin: 8px;
+		}
+	}
+}
+
+/* ==========================================================================
+# Title area style - end
+========================================================================== */

@@ -1,0 +1,197 @@
+.mkd-ptf-masonry {
+	margin: 0 -10px;
+
+	article {
+		padding: 0 10px 20px;
+
+		@include mkdBoxSizing(border-box);
+
+		.mkd-ptf-wrapper {
+			height: 100%;
+		}
+
+		.mkd-portfolio-masonry-item {
+			position: relative;
+			height: 100%;
+		}
+
+		.mkd-item-image-holder {
+			height: 100%;
+			overflow: hidden;
+
+			img {
+				position: relative;
+				width: 100%;
+				vertical-align: middle;
+				top: 50%;
+
+				@include mkdTransform(translateY(-50%));
+			}
+		}
+
+		.mkd-ptf-item-text-holder {
+			text-align: center;
+
+			.mkd-ptf-item-title {
+				width: 90%;
+				margin: 7px auto;
+			}
+		}
+
+		.mkd-ptf-category-holder {
+			color: #fff;
+			font-size: 12px;
+		}
+
+		.mkd-ptf-item-text-holder {
+			.mkd-ptf-item-title {
+				overflow: hidden;
+				text-align: center;
+
+				> a {
+					display: inline-block;
+					opacity: 0;
+					@include mkdTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+
+			.mkd-ptf-category-holder {
+				overflow: hidden;
+				text-align: center;
+
+				> span {
+					display: inline-block;
+					opacity: 0;
+					@include mkdTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+		}
+
+		.mkd-ptf-wrapper:hover {
+			.mkd-ptf-item-text-overlay {
+				opacity: 1;
+			}
+
+			.mkd-ptf-item-title > a {
+				opacity: 1;
+				@include mkdTransform(translate3d(0,0,0));
+				@include mkdTransition(all .5s cubic-bezier(.38,.76,0,.87));
+			}
+
+			.mkd-ptf-category-holder > span {
+				opacity: 1;
+				@include mkdTransform(translate3d(0,0,0));
+				@include mkdTransition(all .5s cubic-bezier(.38,.76,0,.87) .2s);
+			}
+		}
+	}
+
+	.mkd-portfolio-list-masonry-grid-gutter {
+		width: 0;
+	}
+
+	//masonry item width
+
+	.mkd-portfolio-list-masonry-grid-sizer,
+	article.mkd-default-masonry-item,
+	article.mkd-large-height-masonry-item {
+		width: 25%;
+	}
+
+	&.mkd-ptf-masonry-three-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article.mkd-default-masonry-item,
+		article.mkd-large-height-masonry-item {
+			width: 33.33%;
+		}
+	}
+
+	&.mkd-ptf-masonry-five-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article.mkd-default-masonry-item,
+		article.mkd-large-height-masonry-item {
+			width: 20%;
+		}
+	}
+
+	&.mkd-ptf-masonry-six-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article.mkd-default-masonry-item,
+		article.mkd-large-height-masonry-item {
+			width: 16.66%;
+		}
+	}
+
+	//large item width
+
+	.mkd-large-width-masonry-item,
+	.mkd-large-width-height-masonry-item {
+		width: 50%;
+	}
+
+	&.mkd-ptf-masonry-three-columns {
+		.mkd-large-width-masonry-item,
+		.mkd-large-width-height-masonry-item {
+			width: 66.66%;
+		}
+	}
+
+	&.mkd-ptf-masonry-five-columns {
+		.mkd-large-width-masonry-item,
+		.mkd-large-width-height-masonry-item {
+			width: 40%;
+		}
+	}
+
+	&.mkd-ptf-masonry-six-columns {
+		.mkd-large-width-masonry-item,
+		.mkd-large-width-height-masonry-item {
+			width: 33.33%;
+		}
+	}
+
+	//portfolio Masonry content
+
+	.mkd-portfolio-masonry-content .mkd-masonry-content-inner-holder {
+		display: table;
+		position: absolute;
+		top: 0;
+		left: 10px;
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		background-color: #f5f5f5;
+
+		@include mkdBoxSizing(border-box);
+
+		.mkd-portfolio-masonry-subtitle {
+			color: #a7b0be;
+			text-transform: uppercase;
+			margin-top: 10px;
+			margin-bottom: 4px;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+
+		.mkd-portfolio-masonry-title {
+			color: #303030;
+			margin-top: 5px;
+		}
+
+		p {
+			font-size: $default-text-size;
+			color: #737c8b;
+			margin-top: 10px;
+			margin-bottom: 13px;
+		}
+
+		.mkd-masonry-content-inner {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 3% 8%;
+		}
+	}
+}

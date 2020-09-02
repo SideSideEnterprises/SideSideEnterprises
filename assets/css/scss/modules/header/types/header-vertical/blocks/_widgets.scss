@@ -1,0 +1,21 @@
+.mkd-header-vertical {
+	.mkd-vertical-area-widget-holder {
+        position: relative;
+		z-index: 100;
+        font-size: 13px;
+        line-height: 23px;
+        text-align: center;
+        color: #465161;
+	}
+
+    .mkd-vertical-alignment-center{
+
+        .mkd-vertical-area-widget-holder {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+
+}

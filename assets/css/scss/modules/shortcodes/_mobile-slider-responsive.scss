@@ -1,0 +1,40 @@
+@include ipad-landscape {
+	.mkd-mobile-slider-holder .mkd-mobile-slider {
+		width:100%;
+		left:0;
+	}
+
+	.mkd-mobile-slider-holder .mkd-mobile-slider .mkd-mobile-slide .mkd-mobile-slide-inner {
+		margin: 0 8.2% 0 7.9%;
+	}
+
+	.mkd-mobile-slider-holder .mkd-frame-image {
+		width: 140%;
+		max-width: none;
+		left: -20%;
+	}
+}
+
+@include ipad-portrait {
+	.mkd-mobile-slider-holder .mkd-mobile-slider .mkd-mobile-slide .mkd-mobile-slide-inner {
+		margin: 0 7.8% 0 7.5%;
+	}
+
+	.mkd-mobile-slider-holder .mkd-frame-image {
+		width: 280%;
+		max-width: none;
+		left: -90%;
+	}
+}
+
+@include phone-portrait {
+	.mkd-mobile-slider-holder .mkd-mobile-slider .mkd-mobile-slide .mkd-mobile-slide-inner {
+		margin: 0 6.8% 0 6.5%;
+	}
+
+	.mkd-mobile-slider-holder .mkd-frame-image {
+		width: 320%;
+		max-width: none;
+		left: -110%;
+	}
+}

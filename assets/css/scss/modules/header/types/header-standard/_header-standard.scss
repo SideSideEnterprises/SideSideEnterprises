@@ -1,0 +1,62 @@
+.mkd-header-standard {
+	.mkd-menu-area {
+		background-color: #fff;
+
+		@include mkdBoxSizing(border-box);
+
+		.mkd-vertical-align-containers {
+			.mkd-position-center-inner {
+				height: 100%;
+			}
+		}
+
+		.mkd-main-menu-widget-area {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 8px;
+			height: 100%;
+		}
+
+		.mkd-main-menu-widget-area-inner {
+			height: 100%;
+		}
+
+		.mkd-right-from-main-menu-widget {
+			display: table;
+			float: left;
+			padding: 0 10px;
+			position: relative;
+			vertical-align: middle;
+			height: 100%;
+
+			&:not(.widget_mkd_side_area_opener):last-child {
+				padding-right: 0;
+			}
+
+			.mkd-right-from-main-menu-widget-inner {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			&.widget_mkd_side_area_opener {
+				padding: 0 24px;
+			}
+
+		}
+	}
+
+	&.mkd-light-header .mkd-menu-area .mkd-right-from-main-menu-widget:before {
+		background-color: rgba($header-light-color, 0.5);
+	}
+
+	&.mkd-dark-header .mkd-menu-area .mkd-right-from-main-menu-widget:before {
+		background-color: rgba($header-dark-color, 0.5);
+	}
+
+	&.mkd-header-standard-shadow-disable .mkd-menu-area,
+    &.mkd-header-standard-in-grid-shadow-disable .mkd-page-header .mkd-menu-area .mkd-grid .mkd-vertical-align-containers{
+		box-shadow: none;
+	}
+}
+

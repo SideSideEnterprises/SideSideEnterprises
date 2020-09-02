@@ -1,0 +1,32 @@
+.mkd-device-slider-holder {
+	position: relative;
+	max-width: $grid-width-1300;
+	margin: 0 auto;
+
+	& > img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.mkd-frame-image {
+		pointer-events: none;
+		position: relative;
+		z-index: 20;
+	}
+
+	.mkd-device-images-holder {
+		height: 65.4%;
+		left: 24.3%;
+		overflow: hidden;
+		position: absolute;
+		top: 12.8%;
+		width: 51.2%;
+		z-index: 10;
+
+		img {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+	}
+}

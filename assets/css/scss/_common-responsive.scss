@@ -1,0 +1,53 @@
+@include mac {
+	ul.mkd-comment-list .children {
+		padding-left: 60px;
+	}
+
+	ul.mkd-comment-list .children > li:before {
+		margin-right: 5px;
+	}
+}
+
+@include ipad-portrait {
+	ul.mkd-comment-list .children {
+		padding-left: 40px;
+	}
+
+	ul.mkd-comment-list .children > li:before {
+		font-size: 45px;
+		margin-right: 2px;
+	}
+}
+
+@include phone-landscape {
+	.mkd-comment-holder {
+		.mkd-comment-text {
+			padding-left: 0;
+
+			.mkd-comment-name {
+				margin-top: 15px;
+			}
+		}
+
+		.mkd-comment {
+			padding: 25px;
+		}
+		.mkd-comment-reply-holder {
+			top: 23px;
+			right: 9px;
+		}
+	}
+}
+
+@include phone-portrait {
+	ul.mkd-comment-list .children {
+		padding-left: 15px;
+	}
+
+	ul.mkd-comment-list .children > li:before {
+		font-size: 26px;
+		top: 2px;
+		margin-right: 0px;
+	}
+
+}

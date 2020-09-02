@@ -1,0 +1,100 @@
+/* ==========================================================================
+# Countdown style - begin
+========================================================================== */
+/* jQuery Countdown styles 2.0.0. */
+.countdown-rtl {
+	direction: rtl;
+}
+
+.countdown-row {
+	clear: both;
+	width: 100%;
+	padding: 0 2px;
+	text-align: center;
+}
+
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+
+.countdown-show4 .countdown-section {
+	width: 24.5%;
+}
+
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+
+.countdown-show7 .countdown-section {
+	width: 14%;
+}
+
+.mkd-countdown {
+	font-family: $headings-font-family;
+	font-weight: 700;
+
+	.countdown-section {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		font-weight: inherit;
+	}
+
+	.countdown-amount {
+		display: block;
+		position: relative;
+		font-size: 45px;
+		line-height: 1em;
+		color: $first-main-color;
+		letter-spacing: 0.1em;
+	}
+
+	.countdown-period {
+		display: block;
+		margin-top: 11px;
+		font-size: 12px;
+		color: $first-main-color;
+        letter-spacing: 0.2em;
+	}
+
+	&.type-two {
+		text-align: center;
+
+		.countdown-section {
+			width: auto;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+		}
+
+		.countdown-amount, .countdown-period {
+			display: inline-block;
+			font-size: 38px;
+			font-weight: 400;
+			margin-right: 9px;
+		}
+	}
+}
+
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+/* ==========================================================================
+# Countdown style - end
+========================================================================== */

@@ -1,0 +1,35 @@
+.mkd-top-bar {
+	@include ipad-landscape {
+		height: auto;
+		.mkd-vertical-align-containers {
+			height: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			.mkd-position-left,
+			.mkd-position-right {
+				float: none;
+				text-align: center;
+				width: 100%;
+			}
+			.mkd-position-right,
+			.mkd-position-center {
+				display: none;
+			}
+			.mkd-position-left {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	@include phone-landscape {
+		display: none;
+	}
+}
+
+@include phone-landscape {
+	.mkd-top-bar, .mkd-top-bar-background {
+		display: none;
+	}
+}
+

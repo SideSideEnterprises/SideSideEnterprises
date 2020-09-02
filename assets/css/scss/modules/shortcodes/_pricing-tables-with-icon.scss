@@ -1,0 +1,109 @@
+.mkd-pricing-tables-wi {
+	display:table;
+}
+
+.mkd-pricing-table-wi {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width:33.333%;
+	overflow: hidden;
+	background-color: rgba(49, 54, 70, 0.75);
+	padding: 23px;
+	text-align: center;
+
+	@include mkdBoxSizing(border-box);
+	@include mkdTransition(background 0.3s ease-in-out);
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 23px;
+		left: 23px;
+		display: block;
+		height: calc(100% - 46px);
+		width: calc(100% - 46px);
+		border: 3px solid rgba(255, 255, 255, 0.1);
+
+		@include mkdBoxSizing(border-box);
+		@include mkdTransform(scale(1.25, 1.25));
+		@include mkdTransition(transform 0.3s ease-in-out);
+	}
+
+	&:hover {
+		background-color: rgba(49, 54, 70, 0.24);
+
+		&:before {
+			@include mkdTransform(scale(1, 1));
+		}
+	}
+
+	.mkd-pricing-table-wi-inner {
+		position: relative;
+		width:80%;
+		margin:0 auto;
+	}
+
+	.mkd-pt-icon {
+		font-size: 72px;
+		margin-top: 72px;
+		color:#848590;
+	}
+
+	.mkd-pt-title {
+		font-size: 34px;
+		margin-top: 26px;
+		color: #fff;
+	}
+
+	.mkd-pt-subtitle {
+		margin-top: 26px;
+		color: #fff;
+	}
+
+	.mkd-price-currency-period {
+		margin-top: 43px;
+		font-weight: 600;
+		color: #fff;
+	}
+
+	.mkd-currency, .mkd-price {
+		font-size: 34px;
+	}
+
+	.mkd-price {
+		margin-left: -5px;
+	}
+
+	.mkd-price-period {
+		margin-left: -4px;
+	}
+
+	.mkd-pt-content {
+		margin-top: 35px;
+	}
+
+	.mkd-pt-content-inner {
+		list-style-type: none;
+
+		li {
+			list-style-type: none;
+			font-size: 16px;
+			margin: 11px 0;
+			color:#fff;
+
+			&:nth-child(even) {
+				color: #adafb6;
+			}
+		}
+
+		.mkd-icon-shortcode {
+			vertical-align: middle;
+		}
+	}
+
+	.mkd-price-button {
+		margin-top: 40px;
+		margin-bottom: 58px;
+	}
+}

@@ -1,0 +1,55 @@
+/* ==========================================================================
+# Team responsive style - begin
+========================================================================== */
+
+@include phone-landscape {
+	.mkd-team {
+		&.boxed {
+			.mkd-phone-number-holder {
+				background-color: inherit;
+				position: relative;
+				left: 0;
+				text-align: center;
+				transform: none;
+				margin: 10px 0;
+
+				.mkd-phone-number-holder-inner {
+					color: $first-main-color;
+				}
+			}
+
+			.mkd-team-image {
+				float: none;
+				margin: 0 auto;
+			}
+
+			.mkd-team-info {
+				padding-left: 34px;
+				text-align: center;
+			}
+
+			.mkd-team-name {
+				margin-top: 20px;
+			}
+
+			.mkd-team-social {
+				margin-bottom: 23px;
+			}
+		}
+
+		&.split {
+			.mkd-team-image {
+				float: none;
+			}
+
+			.mkd-team-info {
+				padding-left: 0;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Team responsive style - end
+========================================================================== */

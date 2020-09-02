@@ -1,0 +1,268 @@
+/* ==========================================================================
+# Team style - begin
+	========================================================================== */
+
+/* Team type simple - begin
+========================================================================== */
+
+.mkd-team {
+	position: relative;
+
+	.mkd-team-position {
+		color: $default-text-color;
+	}
+
+	.mkd-icon-shortcode {
+		color: $headings-text-color;
+
+		a, span, i {
+			color: $headings-text-color;
+		}
+	}
+
+	.mkd-phone-number-holder {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 40px;
+		background-color: $first-main-color;
+		line-height: 42px;
+		overflow: hidden;
+
+		@include mkdTransform(translateX(-40px));
+		@include mkdTransition(transform 0.2s ease-out);
+
+		.mkd-phone-number-holder-inner {
+			position: relative;
+			white-space: nowrap;
+			letter-spacing: -5px;
+			color: #fff;
+		}
+
+		.mkd-phone-icon {
+			width: 40px;
+			text-align: center;
+			display: inline-block;
+			letter-spacing: normal;
+			font-size: 18px;
+		}
+
+		.mkd-phone-number {
+			display: inline-block;
+			padding-right: 13px;
+			letter-spacing: normal;
+			font-weight: 600;
+			font-family: $headings-font-family;
+		}
+	}
+
+	&:hover .mkd-phone-number-holder {
+		@include mkdTransform(translateX(-100%));
+		@include mkdTransition(transform 0.2s ease-out .2s);
+	}
+
+	&.simple {
+		.mkd-team-inner {
+			text-align: center;
+			width: 100%;
+		}
+
+		.mkd-team-image {
+			position: relative;
+			overflow: hidden;
+			width: 167px;
+			display: block;
+			margin: 0 auto;
+
+			img {
+				vertical-align: middle;
+
+				@include mkdBorderRadius(4px);
+			}
+
+		}
+
+		.mkd-team-title-holder {
+			margin-top: 25px;
+
+			.mkd-team-position {
+				margin-top: 13px;
+			}
+		}
+
+		.mkd-icon-shortcode {
+			margin: 0 7px;
+		}
+	}
+
+	&.boxed {
+
+		@include mkdTransition(all 0.3s ease .1s);
+
+		.mkd-team-inner {
+			border: 1px solid #e1e6eb;
+			background-color: #fff;
+			overflow: hidden;
+			position: relative;
+
+			@include mkdBoxShadow(0 0 0 rgba(0, 0, 0, 0));
+			@include mkdTransition(box-shadow 0.3s ease .1s);
+
+			&:hover {
+				@include mkdBoxShadow(1px 2px 9px 1px rgba(49, 54, 70, 0.09));
+				@include mkdTransition(box-shadow 0.3s ease);
+			}
+		}
+
+		.mkd-team-image {
+			width: 218px;
+			float: left;
+
+			img {
+				display: block;
+			}
+		}
+
+		.mkd-team-name {
+			margin-top: 41px;
+		}
+
+		.mkd-team-info {
+			padding-left: 252px;
+			padding-right: 34px;
+		}
+
+		.mkd-team-description {
+			margin-top: 22px;
+		}
+
+		.mkd-team-social {
+			margin-top: 20px;
+		}
+
+		.mkd-icon-shortcode {
+			margin-right: 14px;
+		}
+
+		&:hover {
+			@include mkdTransition(all 0.3s ease);
+			@include mkdTransform(translate3d(0,-6px,0));
+			@include mkdBoxShadow(5px 8.66px 30px 0 rgba(31,35,37,.078));
+		}
+	}
+
+	&.hover {
+		.mkd-team-inner {
+			position: relative;
+		}
+
+		.mkd-team-image img {
+			display: block;
+			width: 100%;
+		}
+
+		.mkd-team-info {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			background-color: transparentize($first-main-color,.5);
+			opacity: 0;
+
+			.mkd-team-info-tb {
+				@include mkdTransform(translateY(30px));
+				@include mkdTransition(all .0s .25s);
+			}
+
+			@include mkdTransition(opacity 0.3s ease);
+
+			.mkd-team-name {
+				margin-bottom: 16px;
+			}
+
+			.mkd-team-social {
+
+                margin-top: 14px;
+
+				.mkd-icon-shortcode  {
+					color: #fff;
+					font-size: 21px;
+					margin: 0 8px;
+
+					* {
+						color: inherit;
+					}
+
+					&:hover {
+						color: $first-main-color;
+					}
+				}
+			}
+		}
+
+		.mkd-team-inner:hover {
+			.mkd-team-info {
+				opacity: 1;
+
+				.mkd-team-info-tb {
+					@include mkdTransition(all .25s);
+					@include mkdTransform(translateY(0));
+				}
+			}
+		}
+
+		.mkd-team-name, .mkd-team-position, .mkd-team-text,
+		.mkd-icon-shortcode, .mkd-icon-shortcode a, .mkd-icon-shortcode span {
+			color: #fff;
+		}
+
+		.mkd-team-info-tb {
+			display: table;
+			height: 100%;
+			width: 100%;
+		}
+		.mkd-team-info-tc {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+	}
+
+	&.split {
+		.mkd-team-image {
+			width:295px;
+			float:left;
+		}
+		
+		.mkd-team-name {
+			margin-top: 0;
+		}
+
+		.mkd-team-info {
+			padding-left: 330px;
+		}
+
+		.mkd-team-name {
+			margin-bottom:4px;
+		}
+
+		.mkd-team-position {
+			margin-top:20px;
+			margin-top: 4px;
+		}
+		
+		.mkd-team-description {
+			margin-top: 28px;
+		}
+
+		.mkd-team-button {
+			margin-top: 13px;
+		}
+	}
+}
+
+/* ==========================================================================
+# Team style - end
+========================================================================== */

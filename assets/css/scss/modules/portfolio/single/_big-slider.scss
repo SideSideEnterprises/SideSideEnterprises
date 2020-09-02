@@ -1,0 +1,52 @@
+/* ==========================================================================
+# Portfolio Single Big Slider - begin
+========================================================================== */
+
+.mkd-portfolio-single-holder.big-slider {
+	.mkd-portfolio-item-title {
+		margin-bottom: 21px;
+	}
+
+	.mkd-big-image-holder {
+		margin-bottom: 54px;
+	}
+
+	.mkd-portfolio-item-content {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.mkd-slick-slider {
+		opacity: 0;
+
+		.slick-prev {
+			right: calc(100% - 50px);
+
+			&:before {
+				content: '\e875';
+				font-family: 'Linearicons-Free';
+				font-size: 50px;
+				line-height: 47px;
+				color: $headings-text-color;
+				font-weight: 400;
+			}
+		}
+
+		.slick-next {
+			left: calc(100% - 50px);
+
+			&:before {
+				content: '\e876';
+				font-family: 'Linearicons-Free';
+				font-size: 50px;
+				line-height: 47px;
+				color: $headings-text-color;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Portfolio Single Big Slider - end
+========================================================================== */

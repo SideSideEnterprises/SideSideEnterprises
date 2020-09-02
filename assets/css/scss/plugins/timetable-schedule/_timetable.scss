@@ -1,0 +1,343 @@
+table.tt_timetable {
+	font-family: $headings-font-family;
+	font-weight: 700;
+	color: #808080;
+	font-size: 16px;
+	border-collapse: collapse !important; //plugin is also using important
+
+	border: 1px solid #e5e5e5;
+
+	thead tr {
+		border: 1px solid #e5e5e5;
+	}
+
+	tbody tr {
+		border: 1px dashed #e5e5e5;
+	}
+
+	td.tt_hours_column {
+		font-weight: 700;
+		color: #808080!important;
+		text-transform: uppercase;
+		font-size: 12px !important;
+        letter-spacing: 0.2em;
+		font-family: $headings-font-family;
+	}
+
+	th {
+		font-weight: 700;
+        letter-spacing: 0.2em;
+		color: #808080;
+		height: 75px;
+		text-transform: uppercase;
+		font-size: 15px !important;
+		font-family: $headings-font-family;
+
+		border-right: 1px solid #e5e5e5 !important; //plugin is also using important
+
+		@include mkdBoxSizing(border-box);
+	}
+
+	td {
+		font-weight: 400;
+		color: #808080;
+		font-size: 16px;
+
+		border-right: 1px solid #e5e5e5 !important;
+	}
+
+	.row_gray {
+		background-color: transparent !important; //important because plugin css is also using important
+	}
+
+	.event_container {
+		padding: 20px 10px;
+	}
+
+	tbody tr:nth-child(even) {
+		background-color: #fff !important;
+	}
+
+	tbody tr:nth-child(odd) {
+		background-color: #fafafa !important;;
+	}
+
+	.event {
+		background-color: transparent;
+		color: #808080;
+        vertical-align: middle;
+
+		a, .event_header,
+		.after_hour_text {
+			color: #808080 !important; //important because plugin scss is also using important
+		}
+
+		.event_header {
+			margin-bottom: 6px;
+			font-weight: 700;
+            font-family: $headings-font-family;
+            letter-spacing: 0.2em;
+            font-size: 19px;
+            text-transform: uppercase;
+		}
+
+		.event_container .hours {
+			color: #808080!important;
+		}
+
+		&:not(.tt_single_event) {
+			.event_container {
+				border-bottom: 1px dashed #e5e5e5;
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+
+		hr {
+			display: none;
+		}
+
+		&:hover, .event_container.tt_tooltip:hover {
+			background-color: transparent;
+		}
+
+		&.tt_tooltip:hover .hours, .event_container.tt_tooltip:hover .hours {
+			color: #808080;
+		}
+
+		a:hover, a.event_header:hover {
+			text-decoration: none;
+
+			color: $first-main-color !important;
+		}
+	}
+
+	.tt_tooltip_content {
+		color: #fff !important;
+		background: $first-main-color;
+		text-align: center;
+		border-radius: 0;
+		padding: 17px 8px;
+		margin: 16px;
+		font-family: $headings-font-family;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+        letter-spacing: 0.2em;
+        @include mkdBorderRadius(10px);
+		@include mkdBoxSizing(border-box);
+	}
+
+	.tt_tooltip_content a {
+		color: #fff !important;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 8px;
+		display: none;
+
+		&:hover {
+			color: #fff !important;
+		}
+	}
+
+	.tt_tooltip .tt_tooltip_arrow {
+		border-color: $first-main-color transparent;
+		border-width: 12px 12px 0;
+		bottom: 2px;
+	}
+}
+
+.tt_responsive .tt_timetable.small {
+      .box_header {
+          font-family: $headings-font-family !important;
+          color: #808080 !important;
+          font-size: 20px !important;
+          text-align: left;
+
+          margin-bottom: 20px;
+      }
+
+      .tt_items_list {
+          li {
+              border-color: #e5e5e5;
+
+              padding: 15px 0 !important;
+          }
+
+          .event_container {
+              text-align: left;
+          }
+
+          a,
+          .value {
+              font-family: $headings-font-family;
+              font-weight: 700;
+              font-size: 16px;
+              color: #808080 !important;
+          }
+      }
+  }
+
+.tt_responsive#mkd-timetable-transparent .tt_timetable.small {
+    .box_header {
+        color: #fff !important;
+    }
+    .tt_items_list {
+        li {
+            border-color: #e5e5e5;
+        }
+        a,
+        .value {
+            color: #fff !important;
+        }
+    }
+}
+
+body .tt_tabs {
+
+	.tt_timetable .event .after_hour_text {
+		font-size: 13px !important;
+	}
+
+	.tt_timetable th {
+		font-size: 12px !important;
+		letter-spacing: 1px;
+	}
+}
+
+.tt_tabs {
+	text-align: center;
+
+	.tt_tabs_navigation {
+		display: inline-block;
+		width: auto !important;
+
+		margin-bottom: 15px;
+
+		li {
+			margin-right: 15px !important;
+			margin-bottom: 0px !important;
+
+			float: none;
+			display: inline-block;
+		}
+
+		li a {
+			color: $first-main-color !important;
+			background-color: transparent;
+			font-size: 12px !important;
+			font-weight: 700;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			font-family: $headings-font-family;
+
+			border: 2px solid $first-main-color !important;
+			padding: 6px 34px !important;;
+            @include mkdBorderRadius(15px);
+			@include mkdBoxSizing(border-box);
+
+			-webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+			-moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+			transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+		}
+
+		.ui-tabs-active a,
+		li a:hover {
+			background-color: $first-main-color;
+			border: 2px solid $first-main-color !important;
+			color: #fff !important;
+		}
+	}
+}
+
+#mkd-timetable-transparent {
+
+    table.tt_timetable {
+        background: transparent!important;
+        border: none!important;
+
+        tbody tr:nth-child(odd),
+        tbody tr:nth-child(even) {
+            background: transparent!important;
+        }
+
+        td.tt_hours_column,
+        th,
+        .event a,
+        .event .event_header,
+        .event .after_hour_text {
+            color: #fff!important;
+        }
+
+        thead tr {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        tbody tr,
+        td.tt_hours_column {
+            border-left: none!important;
+            border-right: none;
+        }
+
+        th:last-child,
+        td:last-child {
+            border-right: none!important;
+        }
+
+        tbody tr {
+            border-bottom: none;
+        }
+    }
+
+    .tt_tabs_navigation li a {
+        color: #fff!important;
+        border-color: #fff!important;
+        background-color: transparent;
+    }
+
+	.tt_tabs_navigation {
+		.ui-tabs-active a,
+		li a:hover {
+			background-color: $first-main-color;
+			border-color: $first-main-color!important;
+		}
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.tt_responsive .tt_timetable th,
+	.tt_responsive .tt_timetable .event_container,
+	.tt_responsive .tt_tooltip .tt_tooltip_content {
+		padding: 5px !important;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    table.tt_timetable .event .event_header {
+        font-size: 13px;
+    }
+    .tt_tabs .tt_tabs_navigation li {
+        margin-bottom: 12px !important;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 768px) {
+	table.tt_timetable .event .event_header {
+		font-size: 10px;
+	}
+	.tt_tabs .tt_tabs_navigation li {
+		margin-bottom: 12px !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .tt_tabs .tt_tabs_navigation li {
+        margin-right: 0 !important;
+        margin-bottom: 12px !important;
+    }
+}

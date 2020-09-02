@@ -1,0 +1,401 @@
+/* ==========================================================================
+   WooCommerce Dropdown Cart styles - begin
+   ========================================================================== */
+
+.mkd-shopping-cart-holder {
+
+	.touch & {
+		cursor: pointer;
+	}
+
+	&.mkd-cart-info-is-disabled {
+
+		.mkd-header-cart {
+
+			.mkd-cart-info {
+				display: none;
+			}
+		}
+	}
+
+	.mkd-header-cart {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		color: $default-text-color;
+        top: -1px;
+
+		.mkd-cart-icon {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 27px;
+			line-height: 1em;
+			color: #a7b0be;
+
+			&:before {
+				display: block;
+				line-height: inherit;
+			}
+		}
+
+		.mkd-cart-number {
+			position: absolute;
+			display: inline-block;
+			width: 15px;
+			line-height: 15px;
+			float: right;
+			height: 15px;
+			top: 0;
+			right: -6px;
+			font-size: 9px;
+			border-radius: 50%;
+			background-color: $first-main-color;
+			color: #fff;
+			font-weight: 400;
+			font-family: $headings-font-family;
+			text-align: center;
+		}
+
+		.mkd-cart-info {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 0 0 5px;
+			font-size: 14px;
+			line-height: 1;
+			font-weight: 400;
+			clear: both;
+
+			.mkd-cart-info-number {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				float: left;
+				padding: 0 8px 0 0;
+				margin: 0 5px 0 0;
+
+				&:after {
+					position: absolute;
+					right: -1px;
+					content: '-';
+				}
+			}
+
+			.mkd-cart-info-total {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				float: left;
+			}
+		}
+
+		&:hover {
+			color: $headings-text-color;
+		}
+	}
+
+}
+
+.mkd-dark-header .mkd-page-header > div:not(.mkd-sticky-header):not(.fixed) .mkd-shopping-cart-holder .mkd-header-cart {
+	color: $header-dark-color;
+}
+
+.mkd-light-header .mkd-page-header > div:not(.mkd-sticky-header):not(.fixed) .mkd-shopping-cart-holder .mkd-header-cart {
+	color: $header-light-color;
+}
+
+.mkd-sticky-header .mkd-shopping-cart-holder .mkd-header-cart,
+.mkd-sticky-header .mkd-shopping-cart-holder .mkd-header-cart .mkd-cart-icon{
+	color: $headings-text-color;
+}
+
+.mkd-shopping-cart-dropdown {
+	position: absolute;
+	top: 100%;
+	left: auto;
+	right: 0;
+	width: 234px;
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	background-color: #fff;
+	border: 1px solid $default-border-color;
+	text-align: left;
+	z-index: 1000;
+	@include mkdBorderRadius(5px);
+	@include mkdBoxSizing(border-box);
+	-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	@include mkdTransform(translate3d(0,30px,0));
+
+	ul {
+		margin: 25px;
+		padding: 0;
+
+		li {
+			@include mkdTableLayout;
+			padding: 4px 0;
+			@include mkdBoxSizing(border-box);
+
+			&.mkd-empty-cart {
+				border: 0;
+			}
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.mkd-item-image-holder {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		vertical-align: top;
+		width: 54px;
+
+		img {
+			width: 54px;
+			height: 61px;
+			display: block;
+
+		}
+	}
+
+	.mkd-item-info-holder {
+		@include mkdTableCellLayout;
+		vertical-align: top;
+		padding-left: 13px;
+		text-align: left;
+
+		.mkd-product-title {
+			display: block;
+			margin: 0;
+			padding: 0 25px 0 0;
+			@include mkdBoxSizing(border-box);
+			font-size: 11px;
+            letter-spacing: 0.1em;
+
+			.mkd-dark-header & {
+				a {
+					color: #999999 !important;
+				}
+			}
+
+		}
+
+		.remove {
+			position: absolute;
+			top: -2px;
+			right: 3px;
+			width: 18px;
+			height: 18px;
+			line-height: 18px;
+			text-align: center;
+
+			span {
+				display: block;
+				font-size: 16px;
+				line-height: inherit;
+				color: #d7d7d7;
+
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+				.mkd-dark-header & {
+					color: #d7d7d7 !important;
+
+				}
+			}
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		.mkd-quantity {
+			display: inline-block;
+			margin: 7px 0 10px;
+			color: #d7d7d7;
+            font-size: 12px;
+            font-family: $headings-font-family;
+			&:after {
+				content: 'x';
+				display: inline-block;
+				position: relative;
+			}
+			.mkd-dark-header & {
+				color: #d7d7d7 !important;
+			}
+		}
+
+		.amount {
+			display: inline-block;
+			line-height: 1;
+			color: #d7d7d7;
+            font-size: 12px;
+			font-family: $headings-font-family;
+
+			.mkd-dark-header & {
+				color: #d7d7d7 !important;
+				span {
+					color: #d7d7d7 !important;
+				}
+			}
+		}
+	}
+
+	.mkd-cart-bottom {
+
+		.mkd-subtotal-holder {
+			position: relative;
+			display: table;
+			width: 100%;
+			padding: 4px 0 8px 0;
+			margin-bottom: 14px;
+
+			> * {
+				display: table-cell;
+				vertical-align: top;
+				color: $headings-text-color;
+				line-height: 20px;
+				font-weight: 700;
+			}
+
+			.mkd-total {
+				color: $headings-text-color !important;
+				font-size: 12px;
+				font-weight: 700;
+				font-family: $headings-font-family;
+			}
+
+			.mkd-total-amount {
+				text-align: right;
+				font-size: 11px;
+                letter-spacing: 0.1em;
+
+				span {
+					color: $first-main-color;
+					.mkd-dark-header &,
+					.mkd-light-header & {
+						color: $first-main-color !important;
+						font-family: $headings-font-family;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		.mkd-cart-description {
+			@include mkdRelativeHolderLayout();
+			margin: 0 0 10px;
+
+			.mkd-cart-description-inner {
+				position: relative;
+				display: table;
+				width: 100%;
+				height: 100%;
+				padding: 17px 30px;
+				background-color: #f4f4f4;
+				text-align: center;
+				@include mkdBoxSizing(border-box);
+
+				span {
+					position: relative;
+					display: table-cell;
+					width: 100%;
+					height: 100%;
+					vertical-align: middle;
+					color: $headings-text-color;
+					font-size: 12px;
+					line-height: 18px;
+					font-weight: 400;
+				}
+			}
+		}
+
+		.mkd-view-cart {
+			line-height: 26px;
+			height: 26px;
+			padding: 0 15px;
+			display: inline-block;
+			background-color: #f7f7f7;
+			border: 2px solid transparent;
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			-webkit-appearance: none;
+			font-size: 9px;
+            font-weight: 700;
+			@include mkdTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+			@include mkdBorderRadius(3px);
+			float: right;
+
+			span {
+				font-weight: 800;
+				font-family: $headings-font-family;
+				color: #ababab;
+
+				.mkd-dark-header &,
+				.mkd-light-header & {
+					color: #ababab !important;
+				}
+			}
+
+            &:hover {
+                background-color: #f9f9f9;
+            }
+
+		}
+		.mkd-checkout {
+			font-size: 9px;
+			float: left;
+			font-weight: 700;
+			display: inline-block;
+			line-height: 26px;
+			color: #fff;
+			height: 26px;
+			padding: 0 15px;
+			background-color: $first-main-color;
+			border: 2px solid $first-main-color;
+			font-family: $headings-font-family;
+			@include mkdBorderRadius(3px);
+			span {
+				.mkd-dark-header &,
+				.mkd-light-header & {
+					color: #fff !important;
+				}
+			}
+
+			&:hover {
+				background-color: transparentize($first-main-color,.2);
+				border-color: transparent;
+
+                span {
+                    .mkd-dark-header &,
+                    .mkd-light-header & {
+                        color: #fff !important;
+                    }
+                }
+			}
+		}
+	}
+}
+
+.widget_mkd_woocommerce_dropdown_cart:hover {
+	.mkd-shopping-cart-dropdown {
+		visibility: visible;
+		opacity: 1;
+		@include mkdTransform(translate3d(0,0,0));
+	}
+}
+
+/* ==========================================================================
+   WooCommerce Dropdown Cart styles - end
+   ========================================================================== */

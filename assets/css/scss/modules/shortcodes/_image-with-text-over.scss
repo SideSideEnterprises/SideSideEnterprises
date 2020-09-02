@@ -1,0 +1,58 @@
+.mkd-iwt-over {
+	position: relative;
+
+	a {
+		position: absolute;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+		z-index: 100;
+	}
+
+	.mkd-text-holder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+
+		.mkd-text-holder-inner {
+			display: table;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(17, 17, 18, 0.5);
+			opacity: 0;
+			@include mkdTransition(opacity 0.3s ease);
+		}
+
+		.mkd-text {
+			display: table-cell;
+			font-family: $headings-font-family;
+			font-weight: 700;
+            font-size: 19px;
+			text-align: center;
+            letter-spacing: 0.2em;
+			text-transform: uppercase;
+			width: 90%;
+			vertical-align: middle;
+			color: #fff;
+			@include mkdTransform(translateY(30px));
+			@include mkdTransition(all 0.25s ease);
+		}
+	}
+
+	&:hover {
+		.mkd-text-holder-inner {
+			opacity: 1;
+		}
+
+		.mkd-text {
+			@include mkdTransform(translateY(0));
+		}
+	}
+
+	.mkd-image-holder img {
+		display: block;
+	}
+}

@@ -1,0 +1,22 @@
+.mkd-header-minimal {
+    .mkd-page-header .mkd-menu-area {
+        background-color: #fff;
+
+		@include mkdBoxSizing(border-box);
+
+        .mkd-position-right-inner{
+            height: auto;
+        }
+
+	}
+
+    .mkd-page-header .mkd-sticky-header .mkd-position-left-inner{
+        height: auto;
+    }
+
+    &.mkd-header-minimal-shadow-disable .mkd-menu-area,
+    &.mkd-header-minimal-in-grid-shadow-disable .mkd-page-header .mkd-menu-area .mkd-grid .mkd-vertical-align-containers{
+        box-shadow: none;
+    }
+}
+

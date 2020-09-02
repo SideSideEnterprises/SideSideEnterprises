@@ -1,0 +1,24 @@
+.mkd-top-line-holder {
+    position: relative;
+    width: 100%;
+
+    .mkd-top-line-color{
+        display: inline-block;
+        vertical-align: middle;
+        height: 15px;
+        float: left;
+        width: 100%;
+    }
+
+    &.columns-2 .mkd-top-line-color{
+        width: 50%;
+    }
+
+    &.columns-3 .mkd-top-line-color{
+        width: 33.33%;
+    }
+
+    &.columns-4 .mkd-top-line-color{
+        width: 25%;
+    }
+}

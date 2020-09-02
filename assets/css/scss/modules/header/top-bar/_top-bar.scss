@@ -1,0 +1,128 @@
+$top-bar-height: 45px;
+
+.mkd-top-bar-background {
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #333232;
+    z-index: 101;
+}
+
+.mkd-header-box .mkd-top-bar {
+    background-color: transparent;
+}
+
+.mkd-top-bar {
+	width: 100%;
+	background-color: #333232;
+	color: #fff;
+	position: relative;
+	font-weight: 400;
+	height: $top-bar-height;
+	font-size: 13px;
+	z-index: 111;
+    display: inline-block;
+    vertical-align: middle;
+
+	@include mkdBoxSizing(border-box);
+
+	.mkd-grid {
+		height: 100%;
+
+		.mkd-vertical-align-containers {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+    .mkd-vertical-align-containers {
+        .mkd-position-left:before,
+        .mkd-position-center:before,
+        .mkd-position-right:before {
+            margin-right: 0px;
+        }
+    }
+
+	.mkd-top-bar-widget-area,
+	.mkd-top-bar-widget-area-inner {
+		height: 100%;
+	}
+
+	.mkd-top-bar-widget {
+		display: table;
+		float: left;
+		height: 100%;
+
+		padding-right: 24px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&.widget_text {
+			position: relative;
+		}
+	}
+
+	.mkd-top-bar-widget-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.mkd-logo-wrapper a {
+		max-height: $top-bar-height;
+	}
+}
+
+.mkd-top-bar-light .mkd-top-bar {
+	color: $header-light-color; //Beacause of inline color styles
+
+	.widget {
+		color: $header-light-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-light-color !important; //Beacause of inline color styles
+		}
+
+	}
+}
+
+.mkd-top-bar-dark .mkd-top-bar {
+	color: $header-dark-color; //Beacause of inline color styles
+
+	.widget {
+		color: $header-dark-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-dark-color !important; //Beacause of inline color styles
+		}
+
+	}
+}
+
+.mkd-top-bar-gray .mkd-top-bar {
+    color: #777777; //Beacause of inline color styles
+
+    .widget {
+        color: #777777; //Beacause of inline color styles
+
+        p,
+        a,
+        span,
+        i,
+        .widgettitle {
+            color: #777777; //Beacause of inline color styles
+        }
+
+    }
+}

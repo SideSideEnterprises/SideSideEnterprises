@@ -1,0 +1,125 @@
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - begin
+   ========================================================================== */
+
+.woocommerce-page .mkd-content,
+div.woocommerce {
+
+	.mkd-quantity-buttons {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+
+		.mkd-quantity-input,
+		.mkd-quantity-minus,
+		.mkd-quantity-plus {
+			display: inline-block;
+			vertical-align: middle;
+			color: #ababab;
+			background-color: transparent;
+			text-align: center;
+			border: 1px solid #eaeaea;
+
+			@include mkdBoxSizing(border-box);
+		}
+
+		.mkd-quantity-input {
+			position: relative;
+			height: 50px;
+			width: 53px;
+			padding: 0;
+			margin: 0 25px 0 0;
+			font-family: inherit;
+			line-height: 42px;
+			outline: none;
+			font-family: $headings-font-family;
+
+			&:focus {
+				border: 1px solid #eaeaea;
+			}
+		}
+
+		.mkd-quantity-minus,
+		.mkd-quantity-plus {
+			position: absolute;
+			right: 0;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			cursor: pointer;
+			border-left: 0;
+			font-size: 12px;
+
+			@include mkdTransition(color .15s ease-in-out);
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		.mkd-quantity-minus {
+			bottom: 0;
+			border-top: 0;
+			line-height: 20px;
+		}
+
+		.mkd-quantity-plus {
+			top: 0;
+			border-bottom: 0;
+			line-height: 29px;
+		}
+	}
+}
+
+.woocommerce-page .mkd-content,
+div.woocommerce {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="password"],
+	textarea {
+		position: relative;
+		width: 100%;
+		margin: 0 0 14px;
+		padding: 12px 20px;
+		font-family: inherit;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 400;
+		color: $default-text-color;
+		background-color: #fff;
+		border: 1px solid $default-border-color;
+		outline: 0;
+		-webkit-appearance: none;
+		@include mkdBoxSizing(border-box);
+
+		&:focus {
+			border-color: $headings-text-color;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $default-text-color;
+		}
+		&:-moz-placeholder {
+			color: $default-text-color;
+		}
+		&::-moz-placeholder {
+			color: $default-text-color;
+		}
+		&:-ms-input-placeholder {
+			color: $default-text-color;
+		}
+	}
+
+	.coupon {
+
+		input[type="text"] {
+			width: 200px;
+		}
+	}
+}
+
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - end
+   ========================================================================== */

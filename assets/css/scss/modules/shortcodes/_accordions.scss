@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Accordion shortcode start styles
+   ========================================================================== */
+.mkd-accordion-holder {
+	position: relative;
+
+	.mkd-accordion-content {
+		margin: 0;
+		padding: 2px 15px 20px 15px;
+		background-color: #fff;
+
+		p {
+			line-height: 26px;
+		}
+
+	}
+
+	.mkd-title-holder {
+		cursor: pointer;
+		position: relative;
+		margin: 0;
+		padding: 19px 20px;
+		border-bottom: 1px solid #f2f2f2;
+
+		@include mkdBoxSizing(border-box);
+		@include mkdTransform(translateZ(0px));
+		@include mkdTransition(background-color 0.15s ease-out, border-color 0.15s ease-out, color 0.15s ease-out);
+
+		&:first-child {
+			margin: 0;
+		}
+
+		.mkd-accordion-mark {
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			display: block;
+			width: 20px;
+			height: 20px;
+			line-height: 1em;
+			color: #adadad;
+
+			@include mkdTransform(translateY(-50%));
+			@include mkdBoxSizing(border-box);
+			@include mkdTransition(background-color 0.15s ease-out, border-color 0.15s ease-out);
+		}
+
+		.mkd-accordion-mark-icon {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: inherit;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		.mkd-accordion-mark-icon span {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: inherit;
+
+			@include mkdTransition(opacity 0.15s ease-out);
+		}
+
+		.mkd-accordion-mark-icon .icon_minus-06 {
+			opacity: 0;
+		}
+
+		.mkd-accordion-mark-icon .icon_plus {
+			opacity: 1;
+		}
+
+	}
+	.mkd-title-holder.ui-state-active,
+	.mkd-title-holder.ui-state-hover {
+		color: $first-main-color;
+
+		.mkd-accordion-mark {
+			color: $first_main-color;
+		}
+	}
+
+	.mkd-title-holder.ui-state-active {
+
+		.mkd-accordion-mark-icon .icon_minus-06 {
+			opacity: 1;
+		}
+
+		.mkd-accordion-mark-icon .icon_plus {
+			opacity: 0;
+		}
+	}
+}
+
+.mkd-accordion-holder.mkd-initial {
+
+	.mkd-title-holder .mkd-tab-title {
+		@include mkdTableLayout;
+		@include mkdBoxSizing(border-box);
+		text-align: left;
+
+		span.mkd-icon-accordion-holder {
+			font-size: 18px;
+			margin-right: 17px;
+			margin-left: 14px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		span.mkd-tab-title-inner {
+			position: relative;
+			text-align: left;
+		}
+
+	}
+
+}
+
+.mkd-accordion-holder.mkd-boxed {
+
+	.mkd-title-holder {
+		border-bottom: 0;
+		text-align: left;
+		padding: 18px 40px 18px 20px;
+		background-color: #fff;
+		border: 1px solid #e1e6eb;
+		margin-bottom: 13px;
+
+		@include mkdBoxShadow(1px 1px 1px 0px rgba(0, 0, 0, 0.08));
+		@include mkdTransition(color 0.15s ease-out, background-color 0.15s ease-out);
+
+		.mkd-tab-title-inner {
+			padding-left: 7px;
+			font-weight: 500;
+		}
+
+		span.mkd-icon-accordion-holder {
+			margin-right: 6px;
+			font-size: 18px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		.mkd-accordion-mark {
+			border: 0;
+			background-color: transparent;
+			color: $first-main-color;
+
+			@include mkdTransition(color 0.15s ease-out);
+		}
+	}
+	.mkd-title-holder.ui-state-active {
+		color: #fff;
+		background-color: $first-main-color;
+
+		.mkd-accordion-mark {
+			color: #fff;
+		}
+	}
+
+	.mkd-title-holder.ui-state-hover {
+		color: $first-main-color;
+	}
+
+	.mkd-title-holder.ui-state-active.ui-state-hover {
+		color: #fff;
+	}
+}

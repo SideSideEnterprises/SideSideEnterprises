@@ -1,0 +1,114 @@
+.mkd-portfolio-list-holder-outer.mkd-ptf-pinterest,
+.mkd-portfolio-list-holder-outer.mkd-ptf-masonry {
+	.mkd-portfolio-list-holder {
+		opacity: 0;
+	}
+}
+
+.mkd-ptf-pinterest {
+	margin:0 -5px;
+
+	article {
+		padding:0 5px 10px;
+		margin:0;
+
+		@include mkdBoxSizing(border-box);
+
+		.mkd-ptf-wrapper {
+			position: relative;
+		}
+
+		.mkd-ptf-item-text-holder {
+			text-align: center;
+
+			.mkd-ptf-item-title {
+				width:90%;
+				margin:7px auto;
+			}
+		}
+
+		.mkd-ptf-category-holder {
+			color:#fff;
+			font-size:12px;
+		}
+
+		.mkd-ptf-item-text-holder {
+			.mkd-ptf-item-title {
+				overflow: hidden;
+				text-align: center;
+
+				> a {
+					display: inline-block;
+					opacity: 0;
+					@include mkdTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+
+			.mkd-ptf-category-holder {
+				overflow: hidden;
+				text-align: center;
+
+				> span {
+					display: inline-block;
+					opacity: 0;
+					@include mkdTransform(translate3d(0,200%,0));
+					-webkit-transition: opacity .2s, -webkit-transform .0s .2s;
+					transition: opacity .2s, transform .0s .2s;
+				}
+			}
+		}
+
+		.mkd-ptf-wrapper:hover {
+			.mkd-ptf-item-text-overlay {
+				opacity: 1;
+			}
+
+			.mkd-ptf-item-title > a {
+				opacity: 1;
+				@include mkdTransform(translate3d(0,0,0));
+				@include mkdTransition(all .5s cubic-bezier(.38,.76,0,.87));
+			}
+
+			.mkd-ptf-category-holder > span {
+				opacity: 1;
+				@include mkdTransform(translate3d(0,0,0));
+				@include mkdTransition(all .5s cubic-bezier(.38,.76,0,.87) .2s);
+			}
+		}
+	}
+
+	.mkd-portfolio-list-masonry-grid-gutter {
+		width: 0;
+	}
+
+	&.mkd-ptf-pinterest-three-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article {
+			width: 33.3333%;
+		}
+	}
+
+	&.mkd-ptf-pinterest-four-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article {
+			width: 25%;
+		}
+	}
+
+	&.mkd-ptf-pinterest-five-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article{
+			width:20%;
+		}
+	}
+
+	&.mkd-ptf-pinterest-six-columns {
+		.mkd-portfolio-list-masonry-grid-sizer,
+		article{
+			width:16.66%;
+		}
+	}
+
+}

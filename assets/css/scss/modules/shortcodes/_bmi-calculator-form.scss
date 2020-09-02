@@ -1,0 +1,379 @@
+.mkd-bmi-calculator-holder {
+	@include createGridRow(23px);
+
+	.mkd-bmic-table-holder {
+		margin-bottom: 20px;
+
+		.mkd-section-title-holder {
+			margin-bottom: 30px;
+		}
+	}
+
+	.mkd-bmic-form-holder {
+		.mkd-section-subtitle {
+			margin-bottom: 33px;
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 0;
+            color: #808080;
+			text-transform: none;
+			font-family: $default-font-family;
+		}
+
+		.mkd-section-title {
+			margin-bottom: 22px;
+		}
+	}
+
+	table {
+
+		thead {
+			font-family: $headings-font-family;
+			font-size: 19px;
+			color: #2d2d2d;
+			font-weight: 700;
+            letter-spacing: 0.2em;
+
+			tr {
+				border: none;
+
+				border-bottom: 1px solid #e5e5e5;
+			}
+		}
+
+		th {
+			text-align: left;
+			padding: 18px 20px 18px 40px;
+		}
+
+		td {
+			text-align: left;
+			padding: 17px 20px 17px 40px;
+
+			&:first-child {
+				width: 35%;
+			}
+
+			&:last-child {
+				width: 65%;
+			}
+		}
+
+		tbody tr {
+			border: none;
+            color: #2d2d2d;
+			border-bottom: 1px dashed #e5e5e5;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		thead tr,
+		tbody tr {
+			td, th {
+				border-right: 1px dashed #e5e5e5;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+	}
+
+	.mkd-bmic-legend {
+		margin-top: 13px;
+
+		font-size: 14px;
+	}
+
+	.mkd-bmic-table-holder,
+	.mkd-bmic-form-holder {
+		@include createGridColumn(6, 23px);
+		@include createGridColumnResponsive(ipad-landscape);
+	}
+
+	input[type=text],
+	textarea,
+	select {
+		@include inputStyle;
+        background-color: #f8f8f8;
+		font-size: 15px;
+		margin-bottom: 0;
+		@include mkdBorderRadius(5px);
+
+        &::-webkit-input-placeholder {
+            /* WebKit, Blink, Edge */
+            color: #2d2d2d;
+        }
+        &:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: #2d2d2d;
+        }
+        &::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: #2d2d2d;
+
+        }
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #2d2d2d;
+        }
+	}
+
+	.select2-container {
+		width: 100%;
+
+		.select2-selection--single {
+			line-height: 55px;
+			height: 54px;
+			font-size: 16px;
+			color: #2d2d2d;
+			background-color: #f8f8f8;
+			border: 1px solid #f2f2f2;
+			@include mkdBoxShadow(none);
+			@include mkdBorderRadius(5px);
+
+			@include mkdTransition(border-color 0.2s ease-out);
+
+			> .select2-selection__rendered {
+				color: #2d2d2d;
+				line-height: inherit;
+				padding-left: 19px;
+			}
+
+			.select2-selection__arrow {
+				height: 54px;
+
+				b {
+					color: $first-main-color;
+					line-height: inherit;
+				}
+			}
+		}
+
+
+		&.select2-container-active {
+			.select2-choice {
+				border-color: $first-main-color;
+			}
+		}
+	}
+
+	.mkd-bmic-form-row {
+		@include createGridRow(13.5px);
+
+		.mkd-bmic-form-col {
+			@include createGridColumn(6, 13.5px);
+			@include createGridColumnResponsive(phone-landscape);
+
+			margin-bottom: 27px;
+		}
+	}
+
+	.mkd-bmic-submit-row {
+		margin-top: 30px;
+	}
+
+	.mkd-bmic-form-col-full {
+		@include createGridColumn(12, 13.5px);
+	}
+
+	.mkd-bmic-notifications-col {
+		@include createGridColumn(12, 23px);
+
+		margin-top: 55px;
+		font-size: 15px;
+	}
+
+	.mkd-bmic-notifications {
+		background-color: #f8f8f8;
+		padding: 26px 22px;
+
+		position: relative;
+		display: none;
+
+		.mkd-bmic-notification-highlight {
+			font-family: $headings-font-family;
+			color: $headings-text-color;
+			font-size: 12px;
+            letter-spacing: 0.2em;
+			font-weight: 700;
+            text-transform: uppercase;
+
+			margin-right: 20px;
+		}
+
+		.mkd-bmic-notification-text {
+			padding-left: 61px;
+            color: $headings-text-color;
+		}
+
+		.mkd-bmic-icon-holder span {
+			width: 50px;
+			height: 60px;
+			display: block;
+			position: absolute;
+			left: 13px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			-o-background-size: 60px 60px;
+			-webkit-background-size: 60px 60px;
+			-moz-background-size: 60px 60px;
+			background-size: 60px 60px;
+		}
+
+		.mkd-bmic-overweight {
+			background: url(img/overweight.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:150/100), only screen and (min-device-pixel-ratio:1.5), only screen and (min-resolution:160dpi) {
+				background: url('img/overweightx1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio:2.0), only screen and (min--moz-device-pixel-ratio:2.0), only screen and (-o-min-device-pixel-ratio:200/100), only screen and (min-device-pixel-ratio:2.0), only screen and (min-resolution:210dpi) {
+				background: url('img/overweightx2.png') no-repeat;
+			}
+		}
+
+		.mkd-bmic-obese {
+			background: url(img/obese.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:150/100), only screen and (min-device-pixel-ratio:1.5), only screen and (min-resolution:160dpi) {
+				background: url('img/obesex1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio:2.0), only screen and (min--moz-device-pixel-ratio:2.0), only screen and (-o-min-device-pixel-ratio:200/100), only screen and (min-device-pixel-ratio:2.0), only screen and (min-resolution:210dpi) {
+				background: url('img/obesex2.png') no-repeat;
+			}
+		}
+
+		.mkd-bmic-normal {
+			background: url(img/normal.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:150/100), only screen and (min-device-pixel-ratio:1.5), only screen and (min-resolution:160dpi) {
+				background: url('img/normalx1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio:2.0), only screen and (min--moz-device-pixel-ratio:2.0), only screen and (-o-min-device-pixel-ratio:200/100), only screen and (min-device-pixel-ratio:2.0), only screen and (min-resolution:210dpi) {
+				background: url('img/normalx2.png') no-repeat;
+			}
+		}
+
+		.mkd-bmic-underweight {
+			background: url(img/underweight.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:150/100), only screen and (min-device-pixel-ratio:1.5), only screen and (min-resolution:160dpi) {
+				background: url('img/underweightx1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio:2.0), only screen and (min--moz-device-pixel-ratio:2.0), only screen and (-o-min-device-pixel-ratio:200/100), only screen and (min-device-pixel-ratio:2.0), only screen and (min-resolution:210dpi) {
+				background: url('img/underweightx2.png') no-repeat;
+			}
+		}
+
+		&.mkd-bmic-notification-error {
+			background-color: #ec9e8f;
+			color: #fff;
+
+			.mkd-bmic-notification-text {
+				padding-left: 0;
+			}
+		}
+
+		.mkd-bmic-notification-close {
+			position: absolute;
+			right: 20px;
+			width: 24px;
+			height: 24px;
+			font-size: 24px;
+			color: $first-main-color;
+
+			top: 50%;
+
+			@include mkdTransform(translateY(-50%));
+
+			&:after {
+				content: '\4d';
+				font-family: 'ElegantIcons';
+			}
+		}
+	}
+
+    &.mkd-bmi-calculator-light {
+        color: #fff;
+        .mkd-bmic-form-holder {
+            .mkd-section-title,
+            .mkd-section-subtitle {
+                color: #fff;
+            }
+        }
+        .mkd-bmic-table-holder {
+            .mkd-section-title-holder {
+                h3 {
+                    color: #fff;
+                }
+            }
+        }
+        table {
+            thead,
+            tbody tr{
+                color: #fff;
+            }
+        }
+        input[type=text],
+        textarea,
+        select {
+			color: #fff;
+            background-color: rgba(255,255,255,.4);
+
+            &::-webkit-input-placeholder {
+                /* WebKit, Blink, Edge */
+                color: #fff;
+            }
+            &:-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                color: #fff;
+            }
+            &::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                color: #fff;
+
+            }
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: #fff;
+            }
+        }
+        .select2-container {
+
+			.select2-selection--single {
+				color: #fff;
+				background-color: rgba(255, 255, 255, .4);
+				border: 1px solid transparent;
+
+				> .select2-selection__rendered {
+					color: #fff;
+				}
+
+				.select2-selection__arrow {
+
+					b {
+						color: #fff;
+						border-color: #fff transparent transparent;
+					}
+				}
+			}
+
+        }
+
+		.mkd-bmic-notifications {
+			background-color: rgba(108,108,108,.4);
+
+            .mkd-bmic-notification-text,
+            .mkd-bmic-notification-highlight {
+                color: #fff;
+            }
+		}
+    }
+}

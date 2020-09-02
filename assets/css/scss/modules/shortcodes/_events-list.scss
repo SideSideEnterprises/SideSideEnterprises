@@ -1,0 +1,106 @@
+.mkd-events-list {
+	text-align: left;
+}
+
+.mkd-events-list-item {
+	margin-bottom: 30px;
+}
+
+.mkd-events-list-item-image-holder {
+	position: relative;
+	border: 1px solid #f2f2f2;
+	margin-bottom: 20px;
+
+	a {
+		display: block;
+	}
+
+	img {
+		vertical-align: middle;
+	}
+}
+
+span.tribe-events-list-separator-month {
+	display: none !important;
+}
+
+#tribe-events-header ul.tribe-events-sub-nav {
+	visibility: hidden;
+}
+
+.mkd-events-list-item-date-holder {
+	position: absolute;
+	top: -21px;
+	right: 30px;
+	color: #fff;
+	font-weight: 700;
+
+	background-color: $first-main-color;
+	width: 71px;
+	height: 71px;
+	text-align: center;
+
+	@include mkdBoxSizing(border-box);
+
+	.mkd-events-list-item-date-inner {
+		position: relative;
+		top: 50%;
+
+		@include mkdTransform(translateY(-50%));
+	}
+
+	.mkd-events-list-item-date-day {
+		font-size: 26px;
+		display: block;
+		margin-bottom: 7px;
+	}
+
+	.mkd-events-list-item-date-month {
+		font-size: 16px;
+	}
+}
+
+.mkd-events-list-item-title-holder {
+	position: relative;
+	padding-right: 95px;
+
+	.mkd-events-list-item-title {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.mkd-events-list-item-price {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 13px;
+		font-family: $headings-font-family;
+		font-weight: 600;
+		color: #545454;
+		background-color: #f2f2f2;
+		min-width: 90px;
+		padding: 1.5px 12px;
+		text-align: center;
+
+		@include mkdBoxSizing(border-box);
+	}
+}
+
+.mkd-events-list-item-info {
+	margin-top: 21px;
+	padding-top: 21px;
+	border-top: 1px solid #e5e5e5;
+
+	font-weight: 600;
+	color: #ababab;
+	font-size: 15px;
+
+	.mkd-events-list-item-date {
+		margin-bottom: 11px;
+	}
+
+	.mkd-events-item-info-icon {
+		width: 22px;
+		display: inline-block;
+	}
+}

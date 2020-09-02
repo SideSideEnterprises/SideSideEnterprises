@@ -1,0 +1,44 @@
+.mkd-mobile-slider-holder {
+	position: relative;
+	margin: 0 auto;
+
+	& > img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.mkd-frame-image {
+		pointer-events: none;
+		position: relative;
+		z-index: 20;
+	}
+
+	.mkd-mobile-slider {
+		opacity: 0;
+
+		@include mkdTransition(opacity 1s ease);
+
+		&.appeared {
+			opacity: 1;
+		}
+
+		overflow: hidden;
+		position: absolute;
+		top: 12.8%;
+		width: 94%;
+		left: 3%;
+		z-index: 10;
+
+		img {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		.mkd-mobile-slide {
+			.mkd-mobile-slide-inner {
+				margin: 0 9.9% 0 9.6%;
+			}
+		}
+	}
+}

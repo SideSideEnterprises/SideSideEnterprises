@@ -1,0 +1,162 @@
+.mkd-cards-gallery-holder{
+    position: relative;
+
+    &.mkd-no-events{
+        pointer-events: none;
+    }
+
+    .mkd-cards-gallery{
+        width: 100%;
+        position: relative;
+    }
+
+    img{
+        position: relative;
+        display: block;
+        @include mkdTransition(opacity 0.3s ease);
+    }
+
+    .fake_card{
+        position: relative;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    &.mkd-rounded-edges .mkd-bundle-item{
+        @include mkdBorderRadius(20px);
+        overflow: hidden;
+    }
+
+    .card{
+        position: absolute;
+        -webkit-transition: -webkit-transform .7s cubic-bezier(0,0,0,1), top .7s cubic-bezier(0,0,0,1), left .7s cubic-bezier(0,0,0,1), right .7s cubic-bezier(0,0,0,1), margin .2s ease-in-out, opacity .5s ease-out;
+        transition: transform .7s cubic-bezier(0,0,0,1), top .7s cubic-bezier(0,0,0,1), left .7s cubic-bezier(0,0,0,1), right .7s cubic-bezier(0,0,0,1), margin .2s ease-in-out, opacity .5s ease-out;
+        width: 100%;
+
+		@include mkdBoxSizing(border-box);
+
+        .mkd-bundle-item{
+            display: block;
+            position: relative;
+            background-color: #fff;
+            @include mkdBoxShadow(0px 0px 15px 5px rgba(0, 0, 0, 0.05));
+        }
+        //translateZ because of the white outline on items
+        &:nth-last-child(8) {
+            @include mkdTransform(scale(0.3) translateZ(0));
+            top: -105%;
+        }
+
+        &:nth-last-child(7) {
+            @include mkdTransform(scale(0.4) translateZ(0));
+            top: -90%;
+        }
+
+        &:nth-last-child(6) {
+            @include mkdTransform(scale(0.5) translateZ(0));
+            top: -75%;
+        }
+
+        &:nth-last-child(5) {
+            @include mkdTransform(scale(0.6) translateZ(0));
+            top: -60%;
+        }
+
+        &:nth-last-child(4) {
+            @include mkdTransform(scale(0.7) translateZ(0));
+            top: -45%;
+        }
+
+        &:nth-last-child(3) {
+            @include mkdTransform(scale(0.8) translateZ(0));
+            top: -30%;
+        }
+
+        &:nth-last-child(2) {
+            @include mkdTransform(scale(0.9) translateZ(0));
+            top: -15%;
+        }
+
+        &:last-child {
+            @include mkdTransform(translateZ(0));
+            padding: 0;
+            top: 0;
+            &.mkd-transform-y {
+                opacity: 0;
+                @include mkdTransform(translateY(30%) translateZ(0));
+            }
+        }
+
+        &:not(:last-of-type) {
+            cursor: pointer;
+        }
+
+        &:not(:last-of-type):not(.active):hover {
+            margin-top: -10px;
+        }
+
+
+    }
+
+    &.mkd-shuffled-left .card{
+        &:nth-last-child(8) {
+            left: -5%;
+        }
+
+        &:nth-last-child(7) {
+            right: -10%;
+        }
+
+        &:nth-last-child(6) {
+            left: -10%;
+        }
+
+        &:nth-last-child(5) {
+            right: -15%;
+        }
+
+        &:nth-last-child(4) {
+            left: -15%;
+        }
+
+        &:nth-last-child(3) {
+            right: -20%;
+        }
+
+        &:nth-last-child(2) {
+            left: -20%;
+        }
+    }
+
+    &.mkd-shuffled-right .card{
+        &:nth-last-child(8) {
+            right: -5%;
+        }
+
+        &:nth-last-child(7) {
+            left: -10%;
+        }
+
+        &:nth-last-child(6) {
+            right: -10%;
+        }
+
+        &:nth-last-child(5) {
+            left: -15%;
+        }
+
+        &:nth-last-child(4) {
+            right: -15%;
+        }
+
+        &:nth-last-child(3) {
+            left: -20%;
+        }
+
+        &:nth-last-child(2) {
+            right: -20%;
+        }
+    }
+}

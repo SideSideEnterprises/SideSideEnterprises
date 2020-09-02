@@ -1,0 +1,31 @@
+/* ==========================================================================
+# Portfolio Single Small Images - begin
+========================================================================== */
+
+.mkd-portfolio-single-holder.small-images {
+	.mkd-portfolio-media .mkd-portfolio-single-media {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.mkd-portfolio-item-content {
+		margin-top: 34px;
+	}
+
+	.mkd-portfolio-author-holder {
+		margin: 30px 0 27px;
+	}
+
+	.mkd-follow-portfolio-info {
+		position: relative;
+
+		//@include mkdTransition(margin-top 0.2s ease);
+	}
+}
+
+/* ==========================================================================
+# Portfolio Single Small Images - end
+========================================================================== */

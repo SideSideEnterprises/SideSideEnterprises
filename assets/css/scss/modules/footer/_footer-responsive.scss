@@ -1,0 +1,19 @@
+@include ipad-landscape {
+	footer .mkd-footer-top .mkd-grid-row > div {
+		margin-bottom: 40px;
+
+		&:nth-child(2n+1) {
+			clear: both;
+		}
+	}
+
+	footer .mkd-footer-bottom-holder .mkd-footer-bottom-right {
+		text-align: left;
+	}
+
+	footer .mkd-footer-bottom-holder {
+		.mkd-left .mkd-footer-bottom-left, .mkd-right .mkd-footer-bottom-right {
+			text-align: center;
+		}
+	}
+}

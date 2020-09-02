@@ -1,0 +1,80 @@
+.mkd-mobile-header {
+	.mkd-mobile-nav {
+		display: none;
+
+		background-color: #fff;
+
+		ul {
+			list-style-type: none;
+
+			//dropdowns
+			ul {
+				margin-left: 20px;
+				display: none;
+
+                a, h4 {
+                    color: $default-text-color;
+                }
+			}
+		}
+
+		li {
+			position: relative;
+		}
+
+		a, h4 {
+			//h4 is here because of no link option in navigation
+			border-bottom: 1px solid #eaeaea;
+			display: block;
+			font-size: 12px;
+			color: $headings-text-color;
+			padding: 9px 0;
+            margin: 0;
+			position: relative;
+			line-height: 18px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+            font-weight: 400;
+            font-family: $headings-font-family;
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		.mobile_arrow {
+			$mobile-arrow-height: 35px;
+
+			position: absolute;
+			right: 0;
+			top: 0;
+			line-height: $mobile-arrow-height;
+			height: $mobile-arrow-height;
+			padding-right: 10px;
+			width: 50px;
+			text-align: right;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			.mkd-sub-arrow {
+				@include mkdTransition(transform 0.2s ease-in-out);
+			}
+
+			//@TODO remove this line of code when new headers are enabled
+			.fa-angle-down {
+				display: none; //temporarily
+			}
+		}
+
+		li.mkd-opened > .mobile_arrow > .mkd-sub-arrow {
+			@include mkdTransform(rotate(90deg));
+		}
+
+		& > ul > li:last-child > a,
+		& > .mkd-grid > ul > li:last-child > a {
+			border-bottom: none;
+		}
+	}
+}

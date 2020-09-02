@@ -1,0 +1,81 @@
+/* ==========================================================================
+# Pie Chart Basic - begin
+========================================================================== */
+
+.mkd-pie-chart-holder {
+	position: relative;
+	display: block;
+
+	&.mkd-pie-chart-typography-light {
+		span.mkd-to-counter,
+		.mkd-to-counter:after,
+		.mkd-pie-chart-text,
+		.mkd-pie-title {
+			color: #fff;
+		}
+	}
+
+	&.mkd-pie-chart-typography-dark {
+		span.mkd-to-counter,
+		.mkd-pie-title {
+			color: #303030;
+		}
+
+		.mkd-pie-chart-text {
+			color: #808080;
+		}
+	}
+
+	.mkd-percentage {
+		position: relative;
+		display: block;
+		height: 175px;
+		width: 175px;
+		line-height: 175px;
+		text-align: center;
+		margin: 0 auto;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		@include mkdTransition(opacity .3s ease-out);
+
+		.mkd-pie-title {
+			line-height: inherit;
+		}
+
+	}
+
+	.mkd-percentage canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.mkd-to-counter {
+		position: relative;
+		font-weight: 700;
+		font-size: 53px;
+		line-height: 3.6em;
+		display: inline-block;
+		margin-top:7px;
+		font-family: $headings-font-family;
+
+		&:after {
+			content: '%';
+			display: inline-block;
+			position: relative;
+			font-size: 0.5em;
+			top:-0.7em;
+			margin-left: 0.15em;
+		}
+	}
+
+	.mkd-pie-chart-text {
+		text-align: center;
+		margin: 27px 0 0;
+
+	}
+}
+
+/* ==========================================================================
+# Pie Chart Basic - end
+========================================================================== */

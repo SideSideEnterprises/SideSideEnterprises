@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Elements Holder start style
+   ========================================================================== */
+
+.mkd-elements-holder {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	overflow:hidden;
+	margin-top:-30px;
+	padding-top:30px;
+
+	.mkd-elements-holder-item.mkd-width-1-1 {
+		width: 100%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-1-2 {
+		width: 50%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-1-3 {
+		width: 33.3333%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-2-3 {
+		width: 66.6666%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-1-4 {
+		width: 25%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-3-4 {
+		width: 75%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-1-5 {
+		width: 20%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-2-5 {
+		width: 40%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-3-5 {
+		width: 60%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-4-5 {
+		width: 80%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-1-6 {
+		width: 16.6666%;
+	}
+
+	.mkd-elements-holder-item.mkd-width-5-6 {
+		width: 83.3333%;
+	}
+
+	.mkd-elements-holder-item {
+
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		background-size: cover;
+
+		&.mkd-vertical-alignment-top {
+			vertical-align: top;
+		}
+
+		&.mkd-vertical-alignment-bottom {
+			vertical-align: bottom;
+		}
+
+		&.mkd-horizontal-alignment-center {
+			text-align: center;
+		}
+
+		&.mkd-horizontal-alignment-right {
+			text-align: right;
+		}
+
+		&.mkd-horizontal-alignment-left {
+			text-align: left;
+		}
+
+		.mkd-elements-holder-item-inner {
+			width: 100%;
+		}
+	}
+
+	&.mkd-elements-items-float {
+
+		.mkd-elements-holder-item.mkd-width-1-3 {
+			width: 33.33333333333333%;
+		}
+
+		.mkd-elements-holder-item.mkd-width-1-6 {
+			width: 16.66666666666667%;
+		}
+
+		.mkd-elements-holder-item {
+			float: left;
+		}
+	}
+
+	.mkd-elements-holder-item-content {
+		padding: 0 20px;
+
+        .mkd-elements-holder-item-content-inner{
+            border: 2px solid #f8f8f8;
+        }
+	}
+
+}
+
+/* ==========================================================================
+   End of Elements Holder style
+   ========================================================================== */

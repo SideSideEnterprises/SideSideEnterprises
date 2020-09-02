@@ -1,0 +1,27 @@
+.mkd-twitter-slider {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	color: $headings-text-color;
+
+	.mkd-twitter-slider-inner {
+		margin-top: 18px;
+		opacity: 0;
+	}
+
+	.twitter-icon {
+		font-size: 40px;
+	}
+
+	.mkd-twitter-slider-item {
+		h2 {
+			color: inherit;
+			font-weight: 400;
+
+			a {
+				display: block;
+				margin-top: 17px;
+			}
+		}
+	}
+}

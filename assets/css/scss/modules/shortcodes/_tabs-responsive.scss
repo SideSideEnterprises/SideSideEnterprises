@@ -1,0 +1,43 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.mkd-tabs.mkd-vertical .mkd-tabs-nav, .mkd-tabs.mkd-vertical .mkd-tab-container {
+		width: 100% !important;
+	}
+
+	.mkd-tabs .mkd-tabs-nav li,
+	.mkd-tabs.mkd-horizontal .mkd-tabs-nav li {
+		float: none;
+		display: block;
+	}
+
+	.mkd-tabs.mkd-horizontal .mkd-tab-container {
+		border-top: 0;
+	}
+
+	.mkd-tabs.mkd-horizontal .mkd-tabs-nav li:last-child a {
+		border-bottom: 1px solid #f2f2f2;
+	}
+
+	.mkd-tabs.mkd-vertical .mkd-tab-container {
+		border: 1px solid #f2f2f2;
+	}
+
+	.mkd-tabs.mkd-vertical .mkd-tabs-nav li.ui-state-active a:after {
+		content: none;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, large-laptop)) {
+	.mkd-tabs.mkd-horizontal .mkd-tabs-nav li:first-child {
+		border-left: 0;
+		border-bottom: 0;
+	}
+
+	.mkd-tabs.mkd-horizontal .mkd-tabs-nav li:first-child a {
+		border-top: 1px solid #f2f2f2;
+	}
+
+	.mkd-tabs.mkd-horizontal .mkd-tabs-nav li a {
+		border-left: 1px solid #f2f2f2;
+		border-top: 0;
+	}
+}

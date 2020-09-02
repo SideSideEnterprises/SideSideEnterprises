@@ -1,0 +1,43 @@
+.mkd-vertical-progress-bar-holder {
+	* {
+		@include mkdBoxSizing(border-box);
+	}
+
+	h6 {
+		margin-top: 0;
+	}
+
+	.mkd-vpb-content {
+		margin-top: 12px;
+	}
+
+	.mkd-vpb-bar {
+		height: 275px;
+		width: 100%;
+		position: relative;
+	}
+
+	.mkd-vpb-active-bar,
+	.mkd-vpb-inactive-bar {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	.mkd-vpb-inactive-bar {
+		background-color: #f6f8f9;
+		z-index: -1;
+		height: 100%;
+	}
+
+	.mkd-vpb-percent {
+		h6 {
+			margin: 0;
+		}
+	}
+
+	.mkd-vpb-active-bar {
+		background-color: $first-main-color;
+	}
+}

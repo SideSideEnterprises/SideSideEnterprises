@@ -1,0 +1,17 @@
+@include ipad-landscape {
+	table.tt_timetable {
+		th {
+			font-size: 16px;
+		}
+	}
+}
+
+@include phone-portrait {
+	.mkd-ttevents-single {
+		.tt_event_hours li {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+}

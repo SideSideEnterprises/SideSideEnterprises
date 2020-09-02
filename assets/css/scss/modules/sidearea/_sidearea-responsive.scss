@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1500px){
+  .mkd-side-menu{
+    .widget.widget_mkd_instagram_widget{
+      .mkd-instagram-feed{
+        padding-right: 0;
+      }
+    }
+    .widget.widget_text{
+
+      .mkd-iwt.mkd-iwt-left-from-title.mkd-iwt-icon-tiny{
+
+        .mkd-iwt-icon-title-holder{
+          .mkd-iwt-icon-holder{
+            position: absolute;
+          }
+          .mkd-iwt-title-holder{
+            margin-left: 31px;
+          }
+        }
+      }
+    }
+  }
+}

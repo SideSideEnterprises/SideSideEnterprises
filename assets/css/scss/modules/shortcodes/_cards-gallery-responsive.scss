@@ -1,0 +1,51 @@
+.mkd-cards-gallery-holder{
+
+	.mkd-cards-gallery{
+		@include ipad-landscape {
+			min-height: 600px;
+			height: auto !important;
+		}
+		@include ipad-portrait {
+			min-height: 350px;
+		}
+	}
+	.card{
+		@include ipad-portrait {
+			&:nth-last-child(8) {
+				@include mkdTransform(scale(0.3));
+				top: -70%;
+			}
+
+			&:nth-last-child(7) {
+				@include mkdTransform(scale(0.4));
+				top: -60%;
+			}
+
+			&:nth-last-child(6) {
+				@include mkdTransform(scale(0.5));
+				top: -50%;
+			}
+
+			&:nth-last-child(5) {
+				@include mkdTransform(scale(0.6));
+				top: -40%;
+			}
+
+			&:nth-last-child(4) {
+				@include mkdTransform(scale(0.7));
+				top: -30%;
+			}
+
+			&:nth-last-child(3) {
+				@include mkdTransform(scale(0.8));
+				top: -20%;
+			}
+
+			&:nth-last-child(2) {
+				@include mkdTransform(scale(0.9));
+				top: -10%;
+			}
+		}
+
+	}
+}

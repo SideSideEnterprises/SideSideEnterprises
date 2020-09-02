@@ -1,0 +1,104 @@
+/* ==========================================================================
+# Carousels style - begin
+========================================================================== */
+
+.mkd-carousel-holder {
+
+	.mkd-carousel {
+		opacity: 0;
+
+		&.appeared {
+			opacity: 1;
+		}
+	}
+
+	.mkd-carousel-item-holder {
+		position: relative;
+
+		span {
+			display: block;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+
+		/* Image zoom - begin
+		========================================================================== */
+
+		.mkd-carousel-first-image-holder.mkd-image-zoom img {
+			@include mkdTransition(transform 0.15s ease-out);
+			-webkit-backface-visibility: hidden;
+		}
+
+		.mkd-carousel-first-image-holder.mkd-image-zoom:hover img {
+			@include mkdTransform(scale(1.1));
+		}
+
+		/* Image zoom - end
+		========================================================================== */
+
+		/* Image change on hover - begin
+		========================================================================== */
+
+		.mkd-carousel-first-image-holder.mkd-image-change {
+			position: relative;
+			opacity: 1;
+			z-index: 5;
+			@include mkdTransition(opacity 0.3s ease-in-out);
+		}
+
+		&:hover .mkd-carousel-first-image-holder.mkd-has-hover-image.mkd-image-change {
+			opacity: 0;
+		}
+
+		.mkd-carousel-second-image-holder {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			@include mkdTransition(opacity 0.3s ease-in-out);
+		}
+
+		&:hover .mkd-carousel-second-image-holder {
+			opacity: 1;
+		}
+
+		/* Image change on hover - end
+		========================================================================== */
+
+	}
+
+	.mkd-carousel-item-outer-holder.border {
+		border-right: 1px solid #e5e5e5;
+	}
+
+	.border .mkd-carousel-item-holder {
+		padding: 20px;
+		border-bottom: 1px solid #e5e5e5;
+		text-align: center;
+	}
+
+	.border .mkd-carousel-item-holder:last-child {
+		border-bottom: 0;
+	}
+
+	//slick
+
+	.slick-slide:last-child .mkd-carousel-item-outer-holder.border {
+		border-right: 0;
+	}
+
+	.slick-slider {
+		margin-bottom: 0;
+	}
+
+	.slick-track {
+		padding: 1% 0;
+	}
+}
+
+/* ==========================================================================
+# Carousels style - end
+========================================================================== */
