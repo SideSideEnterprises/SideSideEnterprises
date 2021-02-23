@@ -1,0 +1,208 @@
+//Header Tools Style
+
+.header-tools{
+	position:relative;
+		.cart-info {
+			&.cart-style-2{
+				& a {
+					color: #8b4110;
+					& span{
+						&.item-count{
+				    		color: #333;
+				    		-webkit-transition: all 300ms linear;
+						    -moz-transition: all 300ms linear;
+						    -ms-transition: all 300ms linear;
+						    -o-transition: all 300ms linear;
+						    transition: all 300ms linear;
+				    	}
+					}
+					&:hover{
+						& span{
+							&.item-count{
+					    		color: $theme-color;
+					    	}
+						}
+					}
+				}
+			}
+			a {
+				display: block;
+			    position: relative;
+			    font-size: 20px;
+			    font-weight: 700;
+			    line-height: 20px;
+			    height: 50px;
+			    color: #fff;
+			    text-transform: uppercase;
+			    padding-left: 60px;
+			    padding-top: 10px;
+			    &:hover{
+			    	color:$theme-color;
+			    }
+			    & i{
+			    	font-size: 32px;
+				    line-height: 46px;
+				    width: 50px;
+				    height: 50px;
+				    border-width: 2px;
+				    border-style: solid;
+				    text-align: center;
+				    display: inline-block;
+				    margin-right: 10px;
+				    border-radius: 100%;
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    color: #f2ab00;
+
+				    @media #{$extra-small-mobile}{
+			    	font-size: 24px;
+				    line-height: 37px;
+				    width: 40px;
+				    height: 40px;
+				    }
+			    }
+			    & span{
+			    		display: block;
+    					line-height: 20px;
+			    	&.item-total{
+			    		font-weight: 700;
+			    	}
+			    	&.item-count{
+			    		font-size: 14px;
+    					font-weight: 400;
+			    	}
+			    }
+			}
+		}
+}
+.mobile-header{
+	& .cart-info{
+		& a{
+		    & span{
+		    		
+		    	&.item-total{
+		    		display: none;
+		    	}
+		    	&.item-count{
+	    		    width: 20px;
+				    height: 20px;
+				    line-height: 20px;
+				    text-align: center;
+				    border-radius: 100%;
+				    font-weight: 700;
+				    font-size: 14px;
+				    position: absolute;
+				    top: 5px;
+				    right: 0px;
+				    color: #fff;
+				    background-color: $theme-color;
+				    @media #{$extra-small-mobile}{
+					    top: 0px;
+					    right: 5px;
+				    }
+		    	}
+		    }
+		}
+	}
+& .dropdown{
+	&.float-right{
+		float: right;
+		padding-right: 0;
+		&::before {
+			display: none;
+		}
+	}
+	& button{
+		font-weight: 400;
+	    color: $theme-color;
+	    background: transparent;
+	    text-shadow: none;
+	    cursor: pointer;
+	    line-height: 24px;
+	    font-size: 32px;
+	    display: inline-block;
+	    text-transform: uppercase;
+	    -webkit-transition: all 300ms linear;
+	    -moz-transition: all 300ms linear;
+	    -ms-transition: all 300ms linear;
+	    -o-transition: all 300ms linear;
+	    transition: all 300ms linear;
+		& i{
+			font-size: 32px;
+		    line-height: 46px;
+		    width: 50px;
+		    height: 50px;
+		    border-width: 2px;
+		    border-style: solid;
+		    text-align: center;
+		    display: inline-block;
+		    margin-right: 10px;
+		    border-radius: 100%;
+		    color: #f2ab00;
+		    @media #{$extra-small-mobile}{
+		    	font-size: 24px;
+			    line-height: 37px;
+			    width: 40px;
+			    height: 40px;
+		    }
+			&.la-user{
+			    vertical-align: -3px;
+			    display: inline-block;
+			    margin-right: 8px;
+			}
+		}
+		& span{
+
+		}
+		& img{
+			margin-right: 5px;
+    		vertical-align: -1px;
+		}
+		&:hover{
+			color: $theme-color;
+		}
+	}
+	& ul{
+		&.dropdown-menu{
+			margin: 0;
+		    top: 0% !important;
+		    left: auto !important;
+		    right: 0;
+		    min-width: 130px;
+		    overflow: hidden;
+		    padding: 0 15px;
+		    background: #fff;
+		    border-radius: 0;
+		    border: none;
+		    box-shadow: 0 2px 9.4px 0.6px rgba(0,0,0,.06);
+			& li{
+				display: block;
+				padding: 0 10px;
+			    color: #333;
+			    line-height: 40px;
+			    font-size: 13px;
+			    border-bottom: 1px solid #e5e5e5;
+				& a{
+			    	height: auto;
+				    color: #333;
+				    font-size: 13px;
+				    font-weight: 400;
+				    text-transform: capitalize;
+				    padding: 10px 0;
+				    width: 100%;
+			    	&.current{
+			    		color:$theme-color;
+			    	}
+					&:hover{
+						color: $theme-color;
+					}
+				}
+				&:last-child{
+					border:0;
+				}
+			}
+		}
+	}
+}
+}

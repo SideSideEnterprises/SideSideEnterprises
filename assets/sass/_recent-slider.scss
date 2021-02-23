@@ -1,0 +1,30 @@
+//Recent Slider Style
+
+.arrival-area{
+	.list-product{
+	    @media #{$desktop-device}{
+	    }
+	}
+	&.single-product-nav{
+		.section-title{
+			h2{
+				@media #{$large-mobile}{
+					padding: 0;
+					width: 85%;
+				}
+			}
+			&:before{
+				@media #{$large-mobile}{
+					display: none;
+				}
+			}
+		}
+		.slider-nav-style-1 {
+			.slick-arrow {
+			   @media #{$large-mobile}{
+			   	top: -45px;
+			   }
+			}
+		}
+	}
+}

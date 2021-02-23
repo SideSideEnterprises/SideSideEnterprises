@@ -1,0 +1,50 @@
+//Static Area Style
+
+.static-area{
+	.static-area-wrap{
+		background-color: #fff;
+		padding:40px 10px;
+		& .col-lg-3{
+		padding:0;
+		}
+	}
+	.single-static{
+		position: relative;
+	    display: flex;
+	    align-items: flex-start;
+	    padding:0px 20px 0px 30px;
+		& img{
+			flex: 0 0 auto;
+		    margin: 0;
+		    margin-right: 15px;
+		}
+		.single-static-meta{
+
+			& h4{
+			color: #222;
+		    font-size: 14px;
+		    font-weight: 500;
+		    text-transform: capitalize;
+		    line-height: 24px;
+		    margin-bottom: 0px;
+			    @media #{$desktop-device}{
+		    		font-size: 14px;
+			    }
+			}
+			& p{
+			line-height: 17px;
+		    color: #777;
+		    font-size: 13px;
+		    font-weight: 300;
+		    margin: 0;
+			}
+		}
+	}
+	&.static-area-2{
+		.single-static{
+			& img{
+				margin-top: 10px;
+			}
+		}
+	}
+}

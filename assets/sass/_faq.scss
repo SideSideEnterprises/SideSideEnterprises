@@ -1,0 +1,43 @@
+
+.faq-area{
+	.inner-descripe{
+		h4{
+			color: #222;
+		    font-size: 18px;
+		    font-weight: 700;
+		    margin: 0 0 15px;
+		}
+		p{
+			color: #777;
+			line-height: 24px;
+		}
+		margin-bottom: 30px; 
+	}
+	.single-my-account{
+		 h3{
+		 	&.panel-title{
+		 		border-bottom: 0;
+		 		text-transform: capitalize;
+		 		a{
+		    		font-size: 16px;
+		 			@media #{$large-mobile}{
+					padding:12px 38px;
+	    		}
+		 			@media #{$small-mobile}{
+					font-size: 13px;
+	    		}
+		 		}
+		 		span{
+		 			@media #{$large-mobile}{
+					top:10px;
+	    		}
+	    			top:18px;
+		 		}
+		 	}
+		 }
+		 .panel-body{
+		 	padding: 20px;
+		 	line-height: 24px;
+		 }
+	}
+}

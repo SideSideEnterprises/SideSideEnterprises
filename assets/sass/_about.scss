@@ -1,0 +1,34 @@
+// About Page Style
+.about-area{
+	.about-content{
+			& h2 {
+		    font-weight: 700;
+		    margin: 0 0 15px;
+		    font-size: 40px;
+		     @media #{$extra-small-mobile}{
+		    	font-size: 24px;
+		     }
+		}
+		p {
+	    	line-height: 24px;
+		    color: #333;
+		    font-size: 16px;
+		}
+	}
+	.single-about {
+			h4 {
+		    font-size: 30px;
+		    font-weight: 700;
+		    color: #222;
+		    margin: 0 0 15px;
+		     @media #{$extra-small-mobile}{
+		    	font-size: 24px;
+		     }
+		}
+		p{
+	    	line-height: 24px;
+		    color: #333;
+		    font-size: 16px;
+		}
+	}
+}

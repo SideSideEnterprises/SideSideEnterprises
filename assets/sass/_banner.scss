@@ -1,0 +1,249 @@
+//Banner Area Style 
+
+.banner-area{
+	.banner-wrapper{
+		position: relative;
+	    overflow: hidden;
+	    text-align: center;
+		& img{
+			width: 100%;
+		    -webkit-transition: all 300ms linear;
+		    -moz-transition: all 300ms linear;
+		    -ms-transition: all 300ms linear;
+		    -o-transition: all 300ms linear;
+		    transition: all 300ms linear;
+		    max-width: 100%;
+			&:hover{
+					-webkit-transition: all 300ms linear;
+				    -moz-transition: all 300ms linear;
+				    -ms-transition: all 300ms linear;
+				    -o-transition: all 300ms linear;
+				    transition: all 300ms linear;
+				    -webkit-transform: scale(1.035) rotate(0.05deg);
+				    transform: scale(1.035) rotate(0.05deg);
+			}
+			@media #{$large-mobile}{
+				width: 100%
+			}
+		}
+	}
+	 .text {
+	pointer-events: none;
+	position: absolute;
+	left: 9%;
+	top: 50%;
+	text-align: left;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	@media #{$extra-small-mobile}{
+		left: 5%;
+	}
+}
+ .text {
+	 	h3 {
+		font-size: 24px;
+		color: #222222;
+		font-weight: 700;
+		line-height: 1.1;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 1px;
+		span {
+			color: #777;
+			display: block;
+			font-weight: 300;
+		}
+	}
+	h4 {
+		font-size: 24px;
+		color: #fab311;
+		text-transform: capitalize;
+		font-weight: 400;
+		line-height: 1;
+		margin: 0;
+		margin-bottom: 18px;
+		}
+		p {
+		font-size: 40px;
+		color: #ea1b25;
+		margin: 0;
+		text-transform: capitalize;
+		font-weight: 500;
+	}
+		a {
+		font-size: 13px;
+		text-transform: uppercase;
+		color: #ea1b25;
+		line-height: 34px;
+		border: 2px solid #ea1b25;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 15px;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		margin-top: 5px;
+		pointer-events: visible;
+		&:hover {
+			background: #ea1b25;
+			color: #fff;
+		}
+	}
+	&.text-2{
+		h3{
+			color: #fff;
+			span{
+				color: #fff;
+
+			}
+		}
+		h4{
+			color: #fff;
+
+		}
+		p{
+			color: #fff;
+
+		}
+		a{
+			color: #fff;
+			border-color:#fff;
+			&:hover{
+				background:$theme-color;
+				color:#fff;
+				border-color:$theme-color;
+			}
+		}
+	}
+ }
+ .inner{
+ 	margin: 0 -15px;
+    display: grid;
+    grid-template-columns: 55.556% auto;
+    grid-row-gap: 15px;
+    @media #{$large-mobile}{
+	    grid-template-columns: 100%;
+	    grid-row-gap: 30px;
+    }
+    .col{
+    	padding: 0 15px;
+    }
+ }
+ &.banner-style-2{
+ 	.text{
+ 		h3{
+ 			font-size: 40px;
+		    color: #fff;
+		    font-weight: 500;
+		    line-height: 1;
+		    text-transform: capitalize;
+		    margin: 0;
+		    margin-bottom: 6px;
+ 			span{
+ 				display: inline-block;
+ 				color: #ea1b25;
+		    	font-weight: 500;
+ 			}
+ 			@media #{$large-mobile}{
+ 				font-size: 24px;
+ 			}
+ 			@media #{$extra-small-mobile}{
+ 				font-size: 16px;
+ 			}
+ 		}
+ 		h4{
+ 			font-size: 24px;
+		    color: #fab311;
+		    text-transform: capitalize;
+		    font-weight: 400;
+		    line-height: 1;
+		    margin: 0;
+		    margin-bottom: 18px;
+ 			@media #{$large-mobile}{
+ 				font-size: 16px;
+		    	margin-bottom: 10px;
+ 			}
+ 			@media #{$extra-small-mobile}{
+ 				font-size: 14px;
+ 				margin-bottom: 5px;
+ 			}
+ 		}
+ 		p{
+			font-size: 15px;
+		    color: #fff;
+		    margin: 0;
+		    text-transform: capitalize;
+ 			@media #{$large-mobile}{
+ 				font-size: 14px;
+ 			}
+ 			@media #{$extra-small-mobile}{
+ 				font-size: 12px;
+ 			}
+ 		}
+ 	}
+ }
+ &.banner-style-3{
+ 	.text{
+ 		h3{
+ 			@media #{$tablet-device}{
+ 				font-size: 18px;
+ 			}
+ 			@media #{$large-mobile}{
+ 				font-size: 28px;
+ 			}
+ 			@media #{$extra-small-mobile}{
+ 				font-size: 20px;
+ 			}
+ 		}
+ 		h4{
+ 			@media #{$small-mobile}{
+ 				font-size: 16px;
+		    	margin-bottom: 10px;
+ 			}
+ 			@media #{$large-mobile}{
+ 				font-size: 20px;
+ 			}
+ 			@media #{$tablet-device}{
+ 				font-size: 16px;
+ 			}
+ 		}
+ 		p{
+ 			@media #{$large-mobile}{
+ 				font-size: 28px;
+ 			}
+ 			@media #{$extra-small-mobile}{
+ 				font-size: 24px;
+ 			}
+ 			@media #{$tablet-device}{
+ 				font-size: 18px;
+ 			}
+ 		}
+ 		a{
+ 			@media #{$tablet-device}{
+ 				padding: 0 12px;
+ 				line-height: 30px;
+ 			}
+ 		}
+ 	}
+ }
+&.banner-style-4{
+	text-align: center;
+	.banner-wrapper{
+		display: inline-block;
+		.text{
+			h3{
+				@media #{$extra-small-mobile}{
+					font-size: 20px;
+				}
+			}
+			p{
+				@media #{$extra-small-mobile}{
+					font-size: 28px;
+				}
+			}
+		}
+	}
+}
+}

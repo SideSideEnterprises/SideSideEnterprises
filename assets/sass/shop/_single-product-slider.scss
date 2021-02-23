@@ -1,0 +1,13 @@
+.product-details-area{
+	.single-product-slider{
+		.single-product-slider-wrapper{
+			&.slick-initialized{
+			margin-left: -15px;
+			margin-right: -15px;
+				.single-product-slider-item{
+				padding: 15px;
+				}
+			}
+		}			
+	}		
+}
